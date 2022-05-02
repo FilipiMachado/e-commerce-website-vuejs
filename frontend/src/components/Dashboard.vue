@@ -183,6 +183,24 @@
             </v-chip-group>
           </v-card>
         </v-col>
+        <v-col cols="9" class="mt-n3">
+          <v-row>
+            <v-col cols="12" sm="4" v-for="(cloth, i) in clothes" :key="i" :class="cloth.class">
+              <v-hover v-slot:default="{hover}">
+                <v-card height="300" align="center" flat outlined tile>
+                  <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn color="black" small dark>{{ cloth.sold }}</v-btn>
+                  </v-card-actions>
+                  <v-img :src="cloth.image" width="200" height="200" contain></v-img>
+                  <v-card-text class="mt-n4">
+                    <strong :class="hover ? 'red--text' : 'black--text'">{{ cloth.title }}</strong>
+                  </v-card-text>
+                </v-card>
+              </v-hover>
+            </v-col>
+          </v-row>
+        </v-col>
       </v-row>
     </v-card>
   </v-container>
