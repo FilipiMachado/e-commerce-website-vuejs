@@ -48,8 +48,45 @@
                   More Info
                 </v-btn>
               </v-col>
+              <v-col cols="12" sm="6">
+                <v-img src="jacket2.png" max-height="400" max-width="420" contain class="mt-n2"></v-img>
+              </v-col>
             </v-row>
           </v-card>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="12" sm="3" class="mt-n6 pr-0">
+          <v-toolbar flat outlined>
+            <v-toolbar-title><strong>Filter</strong></v-toolbar-title>
+            <v-spacer></v-spacer>
+            <v-divider vertical></v-divider>
+            <v-btn icon class="ml-1">
+              <v-icon color="#3853d8">
+                mdi-sync
+              </v-icon>
+            </v-btn>
+          </v-toolbar>
+        </v-col>
+        <v-col cols="12" sm="3" class="mt-n6 px-0">
+          <v-toolbar flat outlined>
+            <v-toolbar-title>
+              SPORT BY: <span>Price $-$$</span>
+            </v-toolbar-title>
+            <v-spacer></v-spacer>
+            <v-btn icon class="mr-4">
+              <v-icon color="black">mdi-menu-down</v-icon>
+            </v-btn>
+          </v-toolbar>
+        </v-col>
+        <v-col cols="12" sm="3" class="mt-n6 px-0">
+          <v-toolbar flat outlined class="">
+            <v-toolbar-title>SHOW: <span>12</span></v-toolbar-title>
+            <v-spacer></v-spacer>
+            <v-btn icon class="mr-4">
+              <v-icon color="black">mdi-menu-down</v-icon>
+            </v-btn>
+          </v-toolbar>
         </v-col>
       </v-row>
     </v-card>
