@@ -23,3 +23,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.index {
+  z-index: 99;
+}
+</style>
