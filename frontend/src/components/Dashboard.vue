@@ -88,6 +88,56 @@
             </v-btn>
           </v-toolbar>
         </v-col>
+        <v-col cols="12" sm="3" class="mt-n6 pl-0">
+          <v-toolbar flat outlined>
+            <v-btn icon class="mr-1">
+              <v-icon color="#3853d8">mdi-apps</v-icon>
+            </v-btn>
+            <v-divider vertical></v-divider>
+            <v-btn icon class="mx-1">
+              <v-icon color="grey">mdi-format-list-bulleted</v-icon>
+            </v-btn>
+            <v-divider vertical></v-divider>
+            <v-toolbar-title class="ml-2">
+              <strong>COMPARE:</strong>
+            </v-toolbar-title>
+            <v-spacer></v-spacer>
+            <v-badge color="#3853d8" content="3" class="mr-2"></v-badge>
+          </v-toolbar>
+        </v-col>
+        <v-col cols="3" class="py-0 pr-0 mt-n3">
+          <v-card flat outlined tile>
+            <v-toolbar flat>
+              <v-icon color="black" class="mr-2">mdi-chevron-down</v-icon>
+              <strong>CATEGORIES</strong>
+              <v-spacer></v-spacer>
+              <v-icon color="grey" small>mdi-close</v-icon>
+            </v-toolbar>
+            <v-list dense class="mt-n5">
+              <v-list-item v-for="style in styles" :key="style.title">
+                <v-list-item-content>
+                  <v-list-item-title v-text="style.title" class="ml-8"></v-list-item-title>
+                </v-list-item-content>
+                <v-list-item-action>
+                  <v-list-item-subtitle v-text="style.count"></v-list-item-subtitle>
+                </v-list-item-action>
+              </v-list-item>
+            </v-list>
+          </v-card>
+          <v-card flat outlined tile>
+            <v-toolbar flat>
+              <v-icon color="black" class="mr-2">mdi-chevron-down</v-icon>
+              <strong>PRICE</strong>
+              <v-spacer></v-spacer>
+              <v-icon color="grey">mdi-close</v-icon>
+            </v-toolbar>
+            <v-toolbar flat>
+              <v-text-field placeholder="$50" filled rounded dense class="mr-2"></v-text-field>
+              <v-text-field placeholder="$1900" filled rounded dense class="mx-2"></v-text-field>
+            </v-toolbar>
+            <v-range-slider color="blue" max="40" min="30"></v-range-slider>
+          </v-card>
+        </v-col>
       </v-row>
     </v-card>
   </v-container>
@@ -119,6 +169,17 @@ export default {
         disabled: false,
         href: "breadcrumbs_shoes",
       },
+    ],
+    styles: [
+      { title: "Lifestyle", count: "1" },
+      { title: "Running", count: "23" },
+      { title: "Training & Gym", count: "45" },
+      { title: "Basketball", count: "11" },
+      { title: "Football", count: "15" },
+      { title: "Soccer", count: "32" },
+      { title: "Baseball", count: "8" },
+      { title: "Golf", count: "15" },
+      { title: "Skateboarding", count: "22" },
     ],
     }
   }
