@@ -1,15 +1,25 @@
 <template>
-  <hello-world />
+  <v-app>
+    <Navbar class="index"/>
+    <Dashboard />
+    <Footer />
+  </v-app>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
+import Navbar from '../components/Navbar.vue'
+import Dashboard from '../components/Dashboard.vue'
+import Footer from '../components/Footer.vue'
 
-  export default {
-    name: 'Home',
-
-    components: {
-      HelloWorld,
-    },
-  }
+export default {
+  name: "Home",
+  components: {
+    Navbar,
+    Dashboard,
+    Footer
+  },
+  data() {
+    return {}
+  },
+};
 </script>
