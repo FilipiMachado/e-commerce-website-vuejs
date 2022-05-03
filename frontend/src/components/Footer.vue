@@ -15,7 +15,7 @@
             <h5 class="ml-4">Terms of Use</h5>
             <h5 class="ml-4">Privacy Policy</h5>
           </v-toolbar>
-          <v-card-text class="grey--text"> &#169; 2021 -2022 </v-card-text>
+          <v-card-text class="grey--text"> &#169; 2022 </v-card-text>
         </v-col>
         <v-col cols="12" sm="2">
           <v-card-text class="white--text pt-0">

@@ -14,12 +14,13 @@
         Category
     </v-toolbar-title>
     <v-divider vertical class="ml-5"></v-divider>
-    <div class="navbar__main-title">
+    <div @click="goToHomePage" class="navbar__main-title">
       <h4>E-Commerce</h4>
     </div>
     <v-spacer></v-spacer>
     <v-divider vertical></v-divider>
-    <v-btn icon class="mx-1">
+    <!-- User -->
+    <v-btn @click="goToUserPage" icon class="mx-1">
       <v-icon>mdi-account-outline</v-icon>
     </v-btn>
     <v-divider vertical></v-divider>
@@ -36,7 +37,17 @@ export default {
   name: 'Navbar',
   data() {
     return {}
-  }
+  },
+  methods: {
+    goToHomePage() {
+      console.log('Home Page indo de boas!')
+      this.$router.push('/')
+    },
+    goToUserPage() {
+      console.log('User Page indo de boas!')
+      this.$router.push('/user')
+    }
+  },
 }
 </script>
 
@@ -47,6 +58,7 @@ export default {
   margin-right: auto; 
   left: 0; right: 0; 
   text-align: center;
+  cursor: pointer;
 }
 .v-toolbar__title {
   font-size: 1rem !important;
