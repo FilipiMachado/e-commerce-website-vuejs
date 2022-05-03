@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app color="#3853d8" dark>
+  <v-app-bar app color="purple darken-1" dark>
     <v-btn icon>
       <v-icon>mdi-magnify</v-icon>
     </v-btn>
@@ -24,7 +24,7 @@
     </v-btn>
     <v-divider vertical></v-divider>
     <v-btn icon class="mx-1">
-      <v-badge color="#94d0ef" content="2">
+      <v-badge color="purple lighten-2" content="2">
         <v-icon>mdi-cart-outline</v-icon>
       </v-badge>
     </v-btn>

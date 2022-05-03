@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-card color="#3853d8" height="150px" tile flat class="d-flex align-center justify-center" dark>
+    <v-card color="purple darken-2" height="150px" tile flat class="d-flex align-center justify-center" dark>
       <v-row>
         <v-col cols="12" sm="12">
           <h4 class="text-center">AMAZING SHOES</h4>
@@ -8,7 +8,7 @@
         <v-col cols="12" sm="12">
           <v-breadcrumbs :items="items" class="justify-center mt-n7" dark>
             <template v-slot:divider>
-              <v-icon color="#7c92fe">mdi-chevron-right</v-icon>
+              <v-icon color="#fff">mdi-chevron-right</v-icon>
             </template>
           </v-breadcrumbs>
         </v-col>
@@ -17,7 +17,7 @@
     <v-card tile class="mx-16 mt-n10 card1" color="white">
       <v-row>
         <v-col cols="12" sm="8" class="pr-0">
-          <v-card height="250px" tile flat color="#3890d8">
+          <v-card height="250px" tile flat color="purple lighten-3">
             <v-row>
               <v-col cols="12" sm="4" class="pl-8 pt-5">
                 <v-btn color="black" dark class="withoutuppercase" small tile>
@@ -25,7 +25,7 @@
                 </v-btn>
                 <h6 class="white--text mt-8">MOUNTAIN BIKE</h6>
                 <h3 class="white--text mt-5">Trek Speed Concept</h3>
-                <v-btn rounded color="#4c9cdb" dark class="withoutuppercase px-8 mt-10">
+                <v-btn rounded color="#1c1c1c" dark class="withoutuppercase px-8 mt-10">
                   More Info
                 </v-btn>
               </v-col>
@@ -36,7 +36,7 @@
           </v-card>
         </v-col>
         <v-col cols="12" sm="4" class="pl-0">
-          <v-card height="250px" tile flat color="#6857e1">
+          <v-card height="250px" tile flat color="purple lighten-2">
             <v-row>
               <v-col cols="12" sm="6" class="pl-8 pt-5">
                 <v-btn color="black" dark class="withoutuppercase" small tile>
@@ -44,7 +44,7 @@
                 </v-btn>
                 <h6 class="white--text mt-8">DOWN JACKET</h6>
                 <h3 class="white--text mt-5">Sale Collection 2022</h3>
-                <v-btn rounded color="#8375e7" dark class="withoutuppercase px-8 mt-3">
+                <v-btn rounded color="#1c1c1c" dark class="withoutuppercase px-8 mt-3">
                   More Info
                 </v-btn>
               </v-col>
@@ -381,5 +381,8 @@ export default {
 }
 .card2 {
   z-index: 1;
+}
+.v-breadcrumbs >>> a {
+    color: #fff;
 }
 </style>
