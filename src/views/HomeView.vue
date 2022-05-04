@@ -1,19 +1,16 @@
 <template>
   <v-app>
-    <Dashboard />
-    <Footer />
+    <Home />
   </v-app>
 </template>
 
 <script>
-import Dashboard from '../components/Dashboard.vue'
-import Footer from '../components/Footer.vue'
+import Home from '@/components/Home.vue'
 
 export default {
-  name: "Home",
+  name: "HomeView",
   components: {
-    Dashboard,
-    Footer
+    Home,
   },
   data() {
     return {}
