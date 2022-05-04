@@ -174,7 +174,39 @@
 export default {
   name: 'FilterProducts',
   data() {
-    return {}
+    return {
+      styles: [
+        { title: "Lifestyle", count: "1" },
+        { title: "Running", count: "23" },
+        { title: "Training & Gym", count: "45" },
+        { title: "Basketball", count: "11" },
+        { title: "Football", count: "15" },
+        { title: "Soccer", count: "32" },
+        { title: "Baseball", count: "8" },
+        { title: "Golf", count: "15" },
+        { title: "Skateboarding", count: "22" },
+      ],
+      brands: [
+        { title: "Lifestyle", state: true },
+        { title: "Running", state: false },
+        { title: "Training & Gym", state: true },
+        { title: "Basketball", state: false },
+      ],
+      sizes: [
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+      ],
+    }
   }
 }
 </script>

@@ -65,7 +65,7 @@ export default {
   name: 'SpotlightProducts',
   data() {
     return {}
-  }
+  },
 }
 </script>
 

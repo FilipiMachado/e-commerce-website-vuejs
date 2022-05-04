@@ -8,7 +8,7 @@
             dark>
       <v-row>
         <v-col cols="12" sm="12">
-          <h4 class="text-center">AMAZING CLOTHS</h4>
+          <h4 class="text-center">SEE THIS AMAZING NEWS!</h4>
         </v-col>
         <v-col cols="12" sm="12">
           <v-breadcrumbs :items="items" class="justify-center mt-n7" dark>
@@ -135,37 +135,6 @@ export default {
           href: "breadcrumbs_shoes",
         }, */
       ],
-      styles: [
-        { title: "Lifestyle", count: "1" },
-        { title: "Running", count: "23" },
-        { title: "Training & Gym", count: "45" },
-        { title: "Basketball", count: "11" },
-        { title: "Football", count: "15" },
-        { title: "Soccer", count: "32" },
-        { title: "Baseball", count: "8" },
-        { title: "Golf", count: "15" },
-        { title: "Skateboarding", count: "22" },
-      ],
-      brands: [
-        { title: "Lifestyle", state: true },
-        { title: "Running", state: false },
-        { title: "Training & Gym", state: true },
-        { title: "Basketball", state: false },
-      ],
-      sizes: [
-        "35",
-        "36",
-        "37",
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44",
-        "45",
-        "46",
-      ],
       clothes: [],
     };
   },
@@ -174,10 +143,10 @@ export default {
   },
   methods: {
     getProducts() {
-      fetch('https://fakestoreapi.com/products')
+      fetch('https://fakestoreapi.com/products?limit=10')
             .then(res=>res.json())
             .then(json=> this.clothes = json)
-    }
+    },
   },
 };
 </script>
