@@ -1,25 +1,22 @@
 <template>
   <v-app-bar app color="purple darken-1" dark>
-    <v-btn icon>
-      <v-icon>mdi-magnify</v-icon>
-    </v-btn>
-    <v-divider vertical class="ml-1 mr-3"></v-divider>
+    <v-divider vertical class="mr-3"></v-divider>
     <v-btn icon>
       <v-icon>mdi-menu</v-icon>
     </v-btn>
     <v-toolbar-title>
-      <span class="caption">
-        Select
-      </span><br>
-        Category
+      Categories
     </v-toolbar-title>
     <v-divider vertical class="ml-5"></v-divider>
+    <v-btn icon>
+      <v-icon>mdi-magnify</v-icon>
+    </v-btn>
+    <v-divider vertical class="ml-1"></v-divider>
     <div @click="goToHomePage" class="navbar__main-title">
       <h4>E-Commerce</h4>
     </div>
     <v-spacer></v-spacer>
     <v-divider vertical></v-divider>
-    <!-- User -->
     <v-btn @click="goToUserPage" icon class="mx-1">
       <v-icon>mdi-account-outline</v-icon>
     </v-btn>
