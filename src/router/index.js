@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import UserPage from '@/components/UserPage.vue'
+import CartPage from '@/components/CartPage.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,11 @@ const routes = [
     path: '/user',
     name: 'UserPage',
     component: UserPage
+  },
+  {
+    path: '/cartpage',
+    name: 'CartPage',
+    component: CartPage
   },
 ]
 
