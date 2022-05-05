@@ -1,5 +1,11 @@
 <template>
   <div class="userpage__main-content">
+    <div class="userpage__main-title__wrapper">
+      <span class="material-symbols-outlined userpage__main-title__icon">
+        person
+      </span>
+      <span class="userpage__main-title">Meus Dados</span>
+    </div>
     <div class="userpage__userinfo__container">
       <div class="userpage__userinfo__left-content">
         <div class="userpage__userinfo__left-content__img-container">
@@ -28,14 +34,20 @@
       </div>
     </div>
     <div>
-
+      <!-- User Data Component -->
+      <UserData />
     </div>
   </div>
 </template>
-
+ 
 <script>
+import UserData from '@/components/UserData.vue'
+
 export default {
   name: 'UserPage',
+  components: {
+    UserData,
+  },
   data() {
     return {}
   }
@@ -44,6 +56,22 @@ export default {
 
 <style scoped>
 .userpage__main-content {}
+.userpage__main-title__wrapper {
+  margin: 30px 40px;
+  display: flex;
+  align-items: center;
+}
+.userpage__main-title__icon {
+  color: purple;
+  transform: scale(1.5);
+}
+.userpage__main-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #42464d;
+  margin-left: 16px;
+  text-transform: uppercase;
+}
 .userpage__userinfo__container {
   display: flex;
   justify-content: space-between;
