@@ -46,9 +46,8 @@
           </span>
           <span class="userdata__address-title__main-title">Superscription</span>
         </div>
-        <!-- Div daqui para baixo -->
         <div>
-          <div class="userdata__address-info__container">
+          <div style="border-left: 2px solid purple; background-color: #8000802d;" class="userdata__address-info__container">
             <div class="userdata__address-info__main-address">
               <span class="userdata__address-info__main-title">Main Address</span>
               <span class="userdata__address-info__chosen-default">(Default)</span>
@@ -66,7 +65,23 @@
           </div>
           <div class="userdata__address-info__container">
             <div class="userdata__address-info__main-address">
-              <span class="userdata__address-info__main-title">Main Address</span>
+              <span class="userdata__address-info__main-title">Address</span>
+              <span class="userdata__address-info__chosen-default">(Default)</span>
+            </div>
+            <div class="userdata__address-info__details">
+              204 Riverside Street Seymour, IN 47274
+            </div>
+            <div class="userdata__address-info__details">
+              Zip Code: 995041202
+            </div>
+            <div class="userdata__address-info__edit-address__container">
+              <span class="userdata__address-info__edit-address__empty"></span>
+              <span class="userdata__address-info__edit-address__edit-btn">Edit Address</span>
+            </div>
+          </div>
+          <div class="userdata__address-info__container">
+            <div class="userdata__address-info__main-address">
+              <span class="userdata__address-info__main-title">Address</span>
               <span class="userdata__address-info__chosen-default">(Default)</span>
             </div>
             <div class="userdata__address-info__details">
@@ -184,6 +199,7 @@ export default {
 }
 .userdata__address-title__container {
   display: flex;
+  margin-bottom: 20px;
 }
 .userdata__address-title__icon {
   transform: scale(1.5);
