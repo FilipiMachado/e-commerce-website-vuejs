@@ -4,7 +4,7 @@
       <span class="material-symbols-outlined userpage__main-title__icon">
         person
       </span>
-      <span class="userpage__main-title">Meus Dados</span>
+      <span class="userpage__main-title">User Info</span>
     </div>
     <div class="userpage__userinfo__container">
       <div class="userpage__userinfo__left-content">
@@ -34,7 +34,6 @@
       </div>
     </div>
     <div>
-      <!-- User Data Component -->
       <UserData />
     </div>
   </div>
