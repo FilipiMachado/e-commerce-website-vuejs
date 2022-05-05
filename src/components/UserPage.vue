@@ -9,15 +9,15 @@
     <div class="userpage__userinfo__container">
       <div class="userpage__userinfo__left-content">
         <div class="userpage__userinfo__left-content__img-container">
-          <img class="userpage__userinfo__left-content__img" src="@/assets/profile_example.png" alt="">
+          <img class="userpage__userinfo__left-content__img" src="@/assets/profile_example.jpg" alt="">
         </div>
         <div class="userpage__userinfo__left-content__user-container">
-          <span class="userpage__userinfo__left-content__username">Welcome, Filipi Machado</span>
+          <span class="userpage__userinfo__left-content__username">Welcome, Didines Machado</span>
           <div class="userpage__userinfo__left-content__user-email__container">
             <span style="color: purple;" class="material-symbols-outlined">
               mail
             </span>
-            <span class="userpage__userinfo__left-content__user-email">filipimachado@myemail.com</span>
+            <span class="userpage__userinfo__left-content__user-email">didinesmachado@myemail.com</span>
           </div>
         </div>
         <div class="userpage__userinfo__left-content__user-config__container">
@@ -90,7 +90,10 @@ export default {
 .userpage__userinfo__left-content__img-container {
   margin: 0px 20px;
 }
-.userpage__userinfo__left-content__img {}
+.userpage__userinfo__left-content__img {
+  width: 80%;
+  border-radius: 100%;
+}
 .userpage__userinfo__left-content__user-container {
   display: flex;
   flex-direction: column;
