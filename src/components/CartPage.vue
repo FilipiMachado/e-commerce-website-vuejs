@@ -1,11 +1,5 @@
 <template>
   <div class="cartpage__main-content">
-    <div class="cartpage__mycart-title__wrapper">
-      <span class="material-symbols-outlined cartpage__mycart-title__icon">
-        shopping_cart
-      </span>
-      <span class="cartpage__mycart-title__title">My Cart</span>
-    </div>
     <div class="cartpage__cart-items-info__container">
       <div class="cartpage__cart-header__container">
         <div class="cartpage__cart-header__product-wrapper">
@@ -83,9 +77,6 @@
           </span>
         </div>
       </div>
-    </div>
-    <div>
-      asdasdasd
     </div>
   </div>
 </template>
@@ -99,7 +90,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped> 
 .cartpage__main-content {
   padding: 20px;
 }
