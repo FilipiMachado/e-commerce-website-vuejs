@@ -39,6 +39,33 @@
         </div>
       </div>
     </div>
+    <div class="cartpage__resume-info__container">
+      <div class="cartpage__resume-info__resume-wrapper">
+        <span class="cartpage__resume-info__resume-title">Resume</span>
+      </div>
+      <div class="cartpage__resume-info__subtotal-wrapper">
+        <span class="cartpage__resume-info__subtotal-title">Subtotal</span>
+        <span class="cartpage__resume-info__subtotal-value">R$ 5.227,05</span>
+      </div>
+      <div class="cartpage__resume-info__total-wrapper">
+        <span class="cartpage__resume-info__total-title">Total</span>
+        <span class="cartpage__resume-info__total-value">R$ 5.227,05</span>
+      </div>
+      <div class="cartpage__resume-info__incash-wrapper">
+        <span class="cartpage__resume-info__incash-title">à vista</span>
+        <span class="cartpage__resume-info__incash-value">R$4.599,80</span>
+        <span class="cartpage__resume-info__incash-desc">no PIX com 12% desconto</span>
+      </div>
+      <div class="cartpage__resume-info__divider-line">divider line</div>
+      <div class="cartpage__resume-info__installment-wrapper">
+        <span class="cartpage__resume-info__installment-value">R$ 5.227,05</span>
+        <span class="cartpage__resume-info__installment-in-months">em até 12x de 435,59</span>
+        <span class="cartpage__resume-info__installment-title">sem juros no cartão</span>
+      </div>
+      <div class="cartpage__resume-info__finish-order-wrapper">
+        <button class="cartpage__resume-info__finish-order-btn">Finalizar Pedido</button>
+      </div>
+    </div>
     <div class="cartpage__cart-items-info__container">
       <div class="cartpage__cart-header__container">
         <div class="cartpage__cart-header__product-wrapper">
@@ -156,16 +183,16 @@ export default {
 }
 .cartpage__cart-header__product {}
 .cartpage__cart-header__quantity-wrapper {
-  width: 5%;
   padding: 5px;
 }
 .cartpage__cart-header__quantity {}
 .cartpage__cart-header__price-wrapper {
-  width: 5%;
   padding: 5px;
 }
 .cartpage__product-info__item-value {}
-.cartpage__product-info__delete-item__wrapper {}
+.cartpage__product-info__delete-item__wrapper {
+  margin: 0px 10px;
+}
 .cartpage__product-info__delete-icon {
   color: purple;
 }
