@@ -60,45 +60,6 @@
         <button class="cartpage__resume-info__finish-order-btn">Order Now</button>
       </div>
     </div>
-    <!-- <div class="cartpage__cart-items-info__container">
-      <div class="cartpage__cart-header__container">
-        <div class="cartpage__cart-header__product-wrapper">
-          <span class="cartpage__cart-header__product">Product</span>
-        </div>
-        <div class="cartpage__cart-header__quantity-wrapper">
-          <span class="cartpage__cart-header__quantity">Quantity</span>
-        </div>
-        <div class="cartpage__cart-header__price-wrapper">
-          <span class="cartpage__cart-header__price">Price</span>
-        </div>
-      </div>
-      <div class="cartpage__product-info__container">
-        <div class="cartpage__product-info__img-wrapper">
-          <img class="cartpage__product-info__img" src="@/assets/item-sell_example.jpg" alt="">
-        </div>
-        <div class="cartpage__product-info__product-title-wrapper">
-          <span class="cartpage__product-info__product-title-name">Gabinete Gamer Cooler Master CMP 510, RGB, Mid-Tower, Lateral de Vidro, Com 3 Fans, Preto, CP510-KGNN-S00</span>
-          <span class="cartpage__product-info__product-title-desc">SKU: CP510-KGNN-S00</span>
-        </div>
-        <div class="cartpage__product-info__add-remove-items__wrapper">
-          <span class="material-symbols-outlined cartpage__product-info__remove-item">
-            remove
-          </span>
-          <span class="cartpage__product-info__item-quantity">1</span>
-          <span class="material-symbols-outlined cartpage__product-info__add-item">
-            add
-          </span>
-        </div>
-        <div class="cartpage__product-info__item-value">
-          1x $ 795.34
-        </div>
-        <div class="cartpage__product-info__delete-item__wrapper">
-          <span class="material-symbols-outlined cartpage__product-info__delete-icon">
-            delete
-          </span>
-        </div>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -116,6 +77,8 @@ export default {
   display: flex;
   padding: 20px;
   justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 .cartpage__mycart-title__wrapper {
   display: flex;
