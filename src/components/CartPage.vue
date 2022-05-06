@@ -41,32 +41,26 @@
     </div>
     <div class="cartpage__resume-info__container">
       <div class="cartpage__resume-info__resume-wrapper">
-        <span class="cartpage__resume-info__resume-title">Resume</span>
+        <span class="cartpage__resume-info__resume-title">Order Summary</span>
       </div>
       <div class="cartpage__resume-info__subtotal-wrapper">
         <span class="cartpage__resume-info__subtotal-title">Subtotal</span>
-        <span class="cartpage__resume-info__subtotal-value">R$ 5.227,05</span>
+        <span class="cartpage__resume-info__subtotal-value">$ 5.227.05</span>
       </div>
       <div class="cartpage__resume-info__total-wrapper">
         <span class="cartpage__resume-info__total-title">Total</span>
-        <span class="cartpage__resume-info__total-value">R$ 5.227,05</span>
+        <span class="cartpage__resume-info__total-value">$ 5.227.05</span>
       </div>
       <div class="cartpage__resume-info__incash-wrapper">
-        <span class="cartpage__resume-info__incash-title">à vista</span>
-        <span class="cartpage__resume-info__incash-value">R$4.599,80</span>
-        <span class="cartpage__resume-info__incash-desc">no PIX com 12% desconto</span>
-      </div>
-      <div class="cartpage__resume-info__divider-line">divider line</div>
-      <div class="cartpage__resume-info__installment-wrapper">
-        <span class="cartpage__resume-info__installment-value">R$ 5.227,05</span>
-        <span class="cartpage__resume-info__installment-in-months">em até 12x de 435,59</span>
-        <span class="cartpage__resume-info__installment-title">sem juros no cartão</span>
+        <span class="cartpage__resume-info__incash-title">in cash</span>
+        <span class="cartpage__resume-info__incash-value">$4.599.80</span>
+        <span class="cartpage__resume-info__incash-desc">12% discount in credit card</span>
       </div>
       <div class="cartpage__resume-info__finish-order-wrapper">
-        <button class="cartpage__resume-info__finish-order-btn">Finalizar Pedido</button>
+        <button class="cartpage__resume-info__finish-order-btn">Order Now</button>
       </div>
     </div>
-    <div class="cartpage__cart-items-info__container">
+    <!-- <div class="cartpage__cart-items-info__container">
       <div class="cartpage__cart-header__container">
         <div class="cartpage__cart-header__product-wrapper">
           <span class="cartpage__cart-header__product">Product</span>
@@ -104,7 +98,7 @@
           </span>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -119,7 +113,9 @@ export default {
 
 <style scoped> 
 .cartpage__main-content {
+  display: flex;
   padding: 20px;
+  justify-content: space-between;
 }
 .cartpage__mycart-title__wrapper {
   display: flex;
@@ -135,7 +131,7 @@ export default {
   font-weight: bold;
 }
 .cartpage__cart-items-info__container {
-  width: 70%;
+  width: 65%;
   padding: 20px;
   border-radius: 10px;
   background-color: #F2F3F4;
@@ -195,5 +191,90 @@ export default {
 }
 .cartpage__product-info__delete-icon {
   color: purple;
+  cursor: pointer;
+}
+.cartpage__resume-info__container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #F2F3F4;
+  margin-top: 20px;
+}
+.cartpage__resume-info__resume-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid black;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px;
+}
+.cartpage__resume-info__subtotal-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+  font-size: 12px;
+  padding: 10px;
+}
+.cartpage__resume-info__total-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+.cartpage__resume-info__total-value {
+  color: purple;
+}
+.cartpage__resume-info__incash-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+.cartpage__resume-info__installment-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0px;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  font-size: 12px;
+}
+.cartpage__resume-info__finish-order-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.cartpage__resume-info__finish-order-btn {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: purple;
+  border: 1px solid purple;
+}
+.cartpage__resume-info__finish-order-btn:hover {
+  opacity: 0.6;
+  transition: all 0.5s ease;
+}
+.cartpage__resume-info__incash-title {
+  color: purple;
+}
+.cartpage__resume-info__incash-value {
+  color: purple;
+}
+.cartpage__resume-info__incash-desc {
+  font-size: 12px;
 }
 </style>
