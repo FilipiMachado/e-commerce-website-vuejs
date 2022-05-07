@@ -1,7 +1,14 @@
 <template>
-  <div class="cartpage__main-content">
-    <div class="cartpage__cart-items-info__container">
-      <div class="cartpage__cart-header__container">
+  <div>
+    <div class="cartpage__mycart__wrapper">
+      <span class="material-symbols-outlined cartpage__mycart__icon">
+        shopping_cart
+      </span>
+      <span class="cartpage__mycart__title">My Cart</span>
+    </div>
+    <div class="cartpage__main-content">
+      <div class="cartpage__cart-items-info__container">
+       <div class="cartpage__cart-header__container">
         <div class="cartpage__cart-header__product-wrapper">
           <span class="cartpage__cart-header__product">Product</span>
         </div>
@@ -60,7 +67,36 @@
         <button class="cartpage__resume-info__finish-order-btn">Order Now</button>
       </div>
     </div>
-  </div>
+   </div>
+   <div class="cartpage__clear-cart__container">
+     <div class="cartpage__clear-cart__wrapper">
+       <span class="material-symbols-outlined cartpage__clear-cart__icon">
+         delete_forever
+       </span>
+       <span class="cartpage__clear-cart__title">Clear Cart</span>
+     </div>
+   </div>
+   <div>
+     <span>Cupom de Desconto</span>
+     <div>
+       <input placeholder="Cupom" type="text">
+       <div>
+         <span>icon</span>
+         <button>Aplicar</button>
+       </div>
+     </div>
+   </div>
+   <div>
+     <span>Frete e Prazos</span>
+     <div>
+       <input placeholder="CEP" type="text">
+       <div>
+         <span>icon</span>
+         <button>Calcular</button>
+       </div>
+     </div>
+   </div>
+ </div>
 </template>
 
 <script>
@@ -72,7 +108,22 @@ export default {
 }
 </script>
 
-<style scoped> 
+<style scoped>
+.cartpage__mycart__wrapper {
+  padding: 0px 20px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.cartpage__mycart__icon {
+  transform: scale(1);
+  margin-right: 10px;
+  color: purple;
+}
+.cartpage__mycart__title {
+  text-transform: uppercase;
+  font-weight: bold;
+}
 .cartpage__main-content {
   display: flex;
   padding: 20px;
@@ -239,5 +290,28 @@ export default {
 }
 .cartpage__resume-info__incash-desc {
   font-size: 12px;
+}
+.cartpage__clear-cart__container {
+  width: 65%;
+  display: flex;
+  justify-content: end;
+}
+.cartpage__clear-cart__wrapper {
+  background-color: #F2F3F4;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.cartpage__clear-cart__icon {
+  color: purple;
+  transform: scale(1.2);
+  margin-right: 5px;
+}
+.cartpage__clear-cart__title {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
 }
 </style>
