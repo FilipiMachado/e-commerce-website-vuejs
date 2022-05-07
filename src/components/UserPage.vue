@@ -54,7 +54,10 @@ export default {
 </script>
 
 <style scoped>
-.userpage__main-content {}
+.userpage__main-content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
 .userpage__main-title__wrapper {
   margin: 30px 40px;
   display: flex;

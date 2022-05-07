@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container style="margin: 0 auto; max-width: 1280px;" fluid>
     <v-card color="purple darken-2"
             height="150px"
             tile
@@ -26,7 +26,8 @@
       <v-row>
         <v-col cols="12">
           <v-row>
-            <v-col cols="12"
+            <v-col style="cursor: pointer;"
+                   cols="12"
                    sm="4"
                    v-for="(cloth, i) in clothes"
                    :key="i"
@@ -68,9 +69,9 @@
             </v-col>
           </v-row>
         </v-col>
-        <v-col cols="12" sm="6" class="mt-n2 px-0 pb-0">
-          <v-toolbar flat outlined class="text-center">
-            <v-pagination v-model="page" :length="4"></v-pagination>
+        <v-col style="margin: 0 auto;" cols="12" sm="6" class="mt-n2 px-0 pb-0">
+          <v-toolbar style="background-color: #CE93D8;"  flat outlined class="text-center">
+            <v-pagination style="margin: 0 auto;" v-model="page" :length="4"></v-pagination>
           </v-toolbar>
         </v-col>
       </v-row>
