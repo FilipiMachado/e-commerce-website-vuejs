@@ -94,7 +94,9 @@
        <div class="cartpage__zipcode__input-wrapper">
          <input class="cartpage__zipcode__input" placeholder="Zip Code" type="text">
          <div class="cartpage__zipcode__btn-wrapper">
-           <span class="cartpage__zipcode__icon">icon</span>
+           <span class="material-symbols-outlined cartpage__zipcode__icon">
+             local_shipping
+           </span>
            <button class="cartpage__zipcode__btn">Calculate</button>
          </div>
        </div>
@@ -321,14 +323,16 @@ export default {
 .cartpage__bottom-content__container {
   max-width: 1280px;
   display: flex;
-  margin: 10px 20px;
+  margin: 20px auto;
   justify-content: space-between;
+  justify-content: center;
 }
 .cartpage__discount-coupon__container {
-  width: 45%;
+  width: 50%;
   background-color: #F2F3F4;
   padding: 20px;
   border-radius: 10px;
+  margin: 0px 5%;
 }
 .cartpage__discount-coupon__title {
   font-size: 1.25rem;
@@ -361,10 +365,11 @@ export default {
   border-radius: 5px;
 }
 .cartpage__zipcode__container {
-  width: 45%;
+  width: 50%;
   background-color: #F2F3F4;
   padding: 20px;
   border-radius: 10px;
+  margin: 0px 5%;
 }
 .cartpage__zipcode__title {
   font-size: 1.25rem;
@@ -373,17 +378,18 @@ export default {
   margin-bottom: 10px;
 }
 .cartpage__zipcode__input {
-  width: 45%;
-  background-color: #F2F3F4;
-  padding: 20px;
-  border-radius: 10px;
+  width: 50%;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
 }
 .cartpage__zipcode__input-wrapper {
   display: flex;
   align-items: center;
 }
 .cartpage__zipcode__btn-wrapper {
-  
+  display: flex;
+  align-items: center;
 }
 .cartpage__zipcode__icon {
   transform: scale(1.2);
