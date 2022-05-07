@@ -76,23 +76,27 @@
        <span class="cartpage__clear-cart__title">Clear Cart</span>
      </div>
    </div>
-   <div>
-     <span>Cupom de Desconto</span>
-     <div>
-       <input placeholder="Cupom" type="text">
-       <div>
-         <span>icon</span>
-         <button>Aplicar</button>
+   <div class="cartpage__bottom-content__container">
+     <div class="cartpage__discount-coupon__container">
+       <span class="cartpage__discount-coupon__title">Coupon Discount</span>
+       <div class="cartpage__discount-coupon__input-wrapper">
+         <input class="cartpage__discount-coupon__input" placeholder="Coupon" type="text">
+         <div class="cartpage__discount-coupon__btn-wrapper">
+           <span class="material-symbols-outlined cartpage__discount-coupon__icon">
+             approval
+           </span>
+           <button class="cartpage__discount-coupon__btn">Apply</button>
+         </div>
        </div>
      </div>
-   </div>
-   <div>
-     <span>Frete e Prazos</span>
-     <div>
-       <input placeholder="CEP" type="text">
-       <div>
-         <span>icon</span>
-         <button>Calcular</button>
+     <div class="cartpage__zipcode__container">
+       <span class="cartpage__zipcode__title">Shipment</span>
+       <div class="cartpage__zipcode__input-wrapper">
+         <input class="cartpage__zipcode__input" placeholder="Zip Code" type="text">
+         <div class="cartpage__zipcode__btn-wrapper">
+           <span class="cartpage__zipcode__icon">icon</span>
+           <button class="cartpage__zipcode__btn">Calculate</button>
+         </div>
        </div>
      </div>
    </div>
@@ -313,5 +317,82 @@ export default {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: bold;
+}
+.cartpage__bottom-content__container {
+  max-width: 1280px;
+  display: flex;
+  margin: 10px 20px;
+  justify-content: space-between;
+}
+.cartpage__discount-coupon__container {
+  width: 45%;
+  background-color: #F2F3F4;
+  padding: 20px;
+  border-radius: 10px;
+}
+.cartpage__discount-coupon__title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.cartpage__discount-coupon__input-wrapper {
+  display: flex;
+  align-items: center;
+}
+.cartpage__discount-coupon__input {
+  width: 50%;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+.cartpage__discount-coupon__btn-wrapper {
+  display: flex;
+  align-items: center;
+}
+.cartpage__discount-coupon__icon {
+  transform: scale(1.2);
+  margin: 0px 10px;
+}
+.cartpage__discount-coupon__btn {
+  background-color: purple;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+.cartpage__zipcode__container {
+  width: 45%;
+  background-color: #F2F3F4;
+  padding: 20px;
+  border-radius: 10px;
+}
+.cartpage__zipcode__title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.cartpage__zipcode__input {
+  width: 45%;
+  background-color: #F2F3F4;
+  padding: 20px;
+  border-radius: 10px;
+}
+.cartpage__zipcode__input-wrapper {
+  display: flex;
+  align-items: center;
+}
+.cartpage__zipcode__btn-wrapper {
+  
+}
+.cartpage__zipcode__icon {
+  transform: scale(1.2);
+  margin: 0px 10px;
+}
+.cartpage__zipcode__btn {
+  background-color: purple;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
 }
 </style>
