@@ -118,7 +118,7 @@ export default {
         {
           text: "Home",
           disabled: false,
-          href: "breadcrumbs_home",
+          href: "/",
         },
         /* {
           text: "Catalog",
