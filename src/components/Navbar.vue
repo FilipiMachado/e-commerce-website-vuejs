@@ -62,13 +62,6 @@ export default {
 
 <style scoped>
 .navbar__main-title {
-  /* position: absolute;  */
-  /* margin-left: auto;  */
-  /* margin-right: auto;  */
-  /* left: 0; 
-  right: 0; 
-  display: flex;
-  justify-content: center; */
   cursor: pointer;
 }
 .v-toolbar__title {
