@@ -66,7 +66,7 @@
           <div class="userdata__address-info__container">
             <div class="userdata__address-info__main-address">
               <span class="userdata__address-info__main-title">Address</span>
-              <span class="userdata__address-info__chosen-default">(Default)</span>
+              <span class="userdata__address-info__chosen-default"></span>
             </div>
             <div class="userdata__address-info__details">
               204 Riverside Street Seymour, IN 47274
@@ -82,7 +82,7 @@
           <div class="userdata__address-info__container">
             <div class="userdata__address-info__main-address">
               <span class="userdata__address-info__main-title">Address</span>
-              <span class="userdata__address-info__chosen-default">(Default)</span>
+              <span class="userdata__address-info__chosen-default"></span>
             </div>
             <div class="userdata__address-info__details">
               204 Riverside Street Seymour, IN 47274
