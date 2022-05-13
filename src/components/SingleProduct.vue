@@ -23,16 +23,16 @@
         </div>
         <div class="singleproduct__product-options__container">
           <div class="singleproduct__product-options__left-wrapper">
-            <span class="singleproduct__product-options__left-title">Color</span>
+            <span class="singleproduct__product-options__left-title">Colors</span>
             <div class="singleproduct__product-options__left-colors-wrapper">
-              <div class="singleproduct__product-options__left-colors">color</div>
-              <div class="singleproduct__product-options__left-colors">color</div>
-              <div class="singleproduct__product-options__left-colors">color</div>
-              <div class="singleproduct__product-options__left-colors">color</div>
+              <div class="singleproduct__product-options__left-colors color1"></div>
+              <div class="singleproduct__product-options__left-colors color2"></div>
+              <div class="singleproduct__product-options__left-colors color3"></div>
+              <div class="singleproduct__product-options__left-colors color4"></div>
             </div>
           </div>
           <div class="singleproduct__product-options__right-wrapper">
-            <span class="singleproduct__product-options__right-title">Size</span>
+            <span class="singleproduct__product-options__right-title">Sizes</span>
             <div class="singleproduct__product-options__right-sizes-wrapper">
               <div class="singleproduct__product-options__right-sizes">S</div>
               <div class="singleproduct__product-options__right-sizes">M</div>
@@ -131,14 +131,14 @@ export default {
   font-weight: bold;
 }
 .singleproduct__right-content__description-wrapper {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .singleproduct__right-content__description {
   letter-spacing: 1.5px;
   font-size: 14px;
 }
 .singleproduct__product-options__wrapper {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .singleproduct__product-options__title {
   font-size: 18px;
@@ -156,13 +156,26 @@ export default {
 }
 .singleproduct__product-options__left-colors-wrapper {
   display: flex;
+  margin-right: 40px;
 }
 .singleproduct__product-options__left-colors {
-  background-color: #800080;
   color: #fff;
-  padding: 4px;
+  padding: 20px;
   margin-right: 5px;
   border-radius: 4px;
+  cursor: pointer;
+}
+.color1 {
+  background-color: #d81b60;
+}
+.color2 {
+  background-color: #5e35b1;
+}
+.color3 {
+  background-color: #1e88e5;
+}
+.color4 {
+  background-color: #00acc1;
 }
 .singleproduct__product-options__right-wrapper {
   display: flex;
@@ -175,16 +188,30 @@ export default {
   display: flex;
 }
 .singleproduct__product-options__right-sizes {
-  background-color: #006d80;
-  color: #fff;
-  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b6b6b;
+  border: 1.5px solid #b1b1b1;
+  width: 40px;
+  height: 40px;
   margin-right: 5px;
   border-radius: 4px;
+  cursor: pointer;
 }
 .singleproduct__product-options__container {
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
 }
-
+.singleproduct__quantity__container {
+  display: flex;
+  align-items: center;
+}
+.singleproduct__quantity-title {
+  font-weight: 500;
+  margin-right: 10px;
+}
 
 img {
   max-height: 400px;
