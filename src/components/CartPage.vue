@@ -78,7 +78,7 @@
    </div>
    <div class="cartpage__bottom-content__container">
      <div class="cartpage__discount-coupon__container">
-       <span class="cartpage__discount-coupon__title">Coupon Discount</span>
+       <span class="cartpage__discount-coupon__title">Discount Coupon</span>
        <div class="cartpage__discount-coupon__input-wrapper">
          <input class="cartpage__discount-coupon__input" placeholder="Coupon" type="text">
          <div class="cartpage__discount-coupon__btn-wrapper">

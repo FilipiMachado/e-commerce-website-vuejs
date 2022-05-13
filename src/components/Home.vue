@@ -26,7 +26,7 @@
       <v-row>
         <v-col cols="12">
           <v-row>
-            <v-col @click="goToSingleProductPage" style="cursor: pointer;"
+            <v-col @click="goToSingleProductPage(cloth.id)" style="cursor: pointer;"
                    cols="12"
                    sm="4"
                    v-for="(cloth, i) in clothes"
@@ -36,7 +36,8 @@
                 <v-card height="300" align="center" flat outlined tile>
                   <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn color="black" small dark>{{ cloth.sold }}</v-btn>
+                    <!-- Discount Card -->
+                    <!-- <v-btn color="black" small dark>{{ cloth.sold }}</v-btn> -->
                   </v-card-actions>
                   <v-img :src="cloth.image"
                          width="200"
@@ -146,9 +147,13 @@ export default {
     getProducts() {
       fetch('https://fakestoreapi.com/products?limit=10')
             .then(res=>res.json())
-            .then(json=> this.clothes = json)
+            .then((json)=> {
+              console.log(json)
+              this.clothes = json
+            })
     },
-    goToSingleProductPage() {
+    goToSingleProductPage(payload) {
+      console.log(payload)
       this.$router.push('/single-product')
     },
   },

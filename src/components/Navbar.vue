@@ -17,8 +17,11 @@
     </div>
     <v-spacer></v-spacer>
     <v-divider vertical></v-divider>
-    <v-btn @click="goToUserPage" icon class="mx-1">
-      <v-icon>mdi-account-outline</v-icon>
+    <!-- User Icon -->
+    <v-btn v-if="userIsAuth" style="margin: 0px 15px;" color="purple" elevation="2">Login</v-btn>
+    <v-divider v-if="userIsAuth" vertical></v-divider>
+    <v-btn v-if="!userIsAuth"  @click="goToUserPage" icon class="mx-1">
+      <v-icon color="white">mdi-account-outline</v-icon>
     </v-btn>
     <v-divider vertical></v-divider>
     <v-btn @click="goToCartPage" icon class="mx-1">
@@ -33,7 +36,9 @@
 export default {
   name: 'Navbar',
   data() {
-    return {}
+    return {
+      userIsAuth: false,
+    }
   },
   mounted() {
     this.getCategories()
