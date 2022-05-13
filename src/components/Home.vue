@@ -26,7 +26,7 @@
       <v-row>
         <v-col cols="12">
           <v-row>
-            <v-col style="cursor: pointer;"
+            <v-col @click="goToSingleProductPage" style="cursor: pointer;"
                    cols="12"
                    sm="4"
                    v-for="(cloth, i) in clothes"
@@ -147,6 +147,9 @@ export default {
       fetch('https://fakestoreapi.com/products?limit=10')
             .then(res=>res.json())
             .then(json=> this.clothes = json)
+    },
+    goToSingleProductPage() {
+      this.$router.push('/single-product')
     },
   },
 };

@@ -16,6 +16,9 @@
           <span class="singleproduct__right-content__price">$70.00</span>
           <span class="singleproduct__right-content__discounted-price">$80.00</span>
         </div>
+        <div class="singleproduct__right-content__description-wrapper">
+          <span class="singleproduct__right-content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias id itaque architecto? Deserunt, est libero culpa atque ratione, maiores ipsum voluptate facere voluptates quae repellat perferendis beatae, cum cupiditate mollitia!</span>
+        </div>
       </div>
     </div>
   </div>
@@ -33,6 +36,6 @@ export default {
 <style scoped>
 
 img {
-  max-height: 450px;
+  max-height: 400px;
 }
 </style>
