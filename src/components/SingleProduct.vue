@@ -9,11 +9,11 @@
         </div>
         <div class="singleproduct__right-content__reviews-wrapper">
           <span class="singleproduct__right-content__stars">stars</span>
-          <span class="singleproduct__right-content__reviews">(102) Review(s)</span>
+          <span class="singleproduct__right-content__reviews">(102)Review(s)</span>
         </div>
         <div class="singleproduct__right-content__price-wrapper">
           <span class="singleproduct__right-content__price">$70.00</span>
-          <span class="singleproduct__right-content__discounted-price">$80.00</span>
+          <span class="singleproduct__right-content__discounted-price"><strike>$80.00</strike></span>
         </div>
         <div class="singleproduct__right-content__description-wrapper">
           <span class="singleproduct__right-content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias id itaque architecto? Deserunt, est libero culpa atque ratione, maiores ipsum voluptate facere voluptates quae repellat perferendis beatae, cum cupiditate mollitia!</span>
@@ -47,6 +47,7 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0px 10px;
+  border-radius: 3px;
 }
 .singleproduct__right-content__wrapper {
   width: 40%;
@@ -59,6 +60,35 @@ export default {
 }
 .singleproduct__right-content__title {
   font-size: 24px;
+  font-weight: 500;
+}
+.singleproduct__right-content__reviews-wrapper {
+  margin-bottom: 10px;
+}
+.singleproduct__right-content__stars {
+  margin-right: 10px;
+}
+.singleproduct__right-content__reviews {
+  font-weight: 400;
+}
+.singleproduct__right-content__price-wrapper {
+  margin-bottom: 10px;
+}
+.singleproduct__right-content__price {
+  font-size: 18px;
+  color: purple;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.singleproduct__right-content__discounted-price {
+  font-size: 18px;
+  font-weight: bold; letter-spacing: 1.5px;
+}
+.singleproduct__right-content__description-wrapper {
+
+}
+.singleproduct__right-content__description {
+  
 }
 
 img {
