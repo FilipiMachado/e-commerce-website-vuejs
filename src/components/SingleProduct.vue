@@ -2,11 +2,10 @@
   <div class="singleproduct__main-content">
     <div class="singleproduct__main-content__wrapper">
       <div class="singleproduct__left-content__wrapper">
-        <img class="singleproduct__left-content__img" src="@/assets/single-product-example.jpg" alt="">
       </div>
       <div class="singleproduct__right-content__wrapper">
         <div class="singleproduct__right-content__title-wrapper">
-          <span class="singleproduct__right-content__title">Title</span>
+          <span class="singleproduct__right-content__title">Nonstick dishwasher PFOA</span>
         </div>
         <div class="singleproduct__right-content__reviews-wrapper">
           <span class="singleproduct__right-content__stars">stars</span>
@@ -34,6 +33,33 @@ export default {
 </script>
 
 <style scoped>
+.singleproduct__main-content {}
+.singleproduct__main-content__wrapper {
+  display: flex;
+  max-width: 1280px;
+  margin: 40px 10%;
+  justify-content: center;
+}
+.singleproduct__left-content__wrapper {
+  width: 40%;
+  height: 500px;
+  background-image: url('@/assets/single-product-example.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0px 10px;
+}
+.singleproduct__right-content__wrapper {
+  width: 40%;
+  margin: 0px 10px;
+  display: flex;
+  flex-direction: column;
+}
+.singleproduct__right-content__title-wrapper {
+  margin-bottom: 10px;
+}
+.singleproduct__right-content__title {
+  font-size: 24px;
+}
 
 img {
   max-height: 400px;

@@ -26,7 +26,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+body {
+  font-family: 'Roboto', sans-serif;
+}
 .index {
   z-index: 99;
 }
