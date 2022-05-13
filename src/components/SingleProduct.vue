@@ -1,6 +1,12 @@
 <template>
   <div class="singleproduct__main-content">
     <div class="singleproduct__main-content__wrapper">
+      <div class="singleproduct__mini-images__container">
+        <div class="singleproduct__mini-images__img mini-img-selected"></div>
+        <div class="singleproduct__mini-images__img"></div>
+        <div class="singleproduct__mini-images__img"></div>
+        <div class="singleproduct__mini-images__img"></div>
+      </div>
       <div class="singleproduct__left-content__wrapper">
       </div>
       <div class="singleproduct__right-content__wrapper">
@@ -53,16 +59,18 @@
             <span class="singleproduct__quantity__add-to-cart">Add To Cart</span>
           </div>
           <div class="singleproduct__quantity__favorite-btn">
-            <span class="singleproduct__quantity__favorite">fav icon</span>
+            <span class="material-icons favorite-icon">
+              favorite
+            </span>
           </div>
         </div>
-        <div>
-          <span>Category: </span>
-          <span>Clothing</span>
+        <div class="singleproduct__category-wrapper">
+          <span class="singleproduct__category">Category: </span>
+          <span class="singleproduct__category-title">Clothing</span>
         </div>
-        <div>
-          <span>Availability</span>
-          <span>180 Products in stock</span>
+        <div class="singleproduct__availability-wrapper">
+          <span class="singleproduct__availability">Availability: </span>
+          <span class="singleproduct__availability-quantity">180 Products in stock</span>
         </div>
       </div>
     </div>
@@ -207,10 +215,88 @@ export default {
 .singleproduct__quantity__container {
   display: flex;
   align-items: center;
+  margin: 10px 0px;
 }
 .singleproduct__quantity-title {
   font-weight: 500;
   margin-right: 10px;
+}
+.singleproduct__quantity-wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #b1b1b1;
+  color: #6b6b6b;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin: 0px 8px;
+}
+.singleproduct__quantity-minus {
+  cursor: pointer;
+}
+.singleproduct__quantity {
+  margin: 0px 20px;
+}
+.singleproduct__quantity-plus {
+  cursor: pointer;
+}
+.singleproduct__quantity__add-to-cart-btn {
+  background-color: #3d3d3d;
+  color: #fff;
+  padding: 8px 22px;
+  border-radius: 5px;
+  margin-left: 35px;
+  cursor: pointer;
+}
+.singleproduct__quantity__add-to-cart {
+}
+.singleproduct__quantity__favorite-btn {
+  background-color: #3d3d3d;
+  padding: 8px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.singleproduct__quantity__favorite {}
+.favorite-icon {
+  display: flex;
+  color: #fff;
+  cursor: pointer;
+}
+.singleproduct__category-wrapper {
+  margin: 15px 0px;
+}
+.singleproduct__category {
+  font-weight: bold;
+}
+.singleproduct__category-title {
+  font-weight: 400;
+}
+.singleproduct__availability-wrapper {}
+.singleproduct__availability {
+  font-weight: bold;
+}
+.singleproduct__availability-quantity {
+  font-weight: 400;
+}
+.singleproduct__mini-images__container {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+.singleproduct__mini-images__img {
+  width: 80px;
+  height: 80px;
+  background-image: url('@/assets/single-product-example.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 10px;
+  border-radius: 4px;
+  border: 2px solid #b1b1b1;
+}
+.mini-img-selected {
+  border: 2px solid #800080;
+  opacity: 0.5;
 }
 
 img {
