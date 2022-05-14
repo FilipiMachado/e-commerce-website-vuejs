@@ -16,13 +16,16 @@
       <h4>E-Commerce Website</h4>
     </div>
     <v-spacer></v-spacer>
+    <v-btn @click="logOutAuthO" v-if="$auth.isAuthenticated" style="margin: 0px 15px;" color="purple" elevation="2">Logout</v-btn>
     <v-divider vertical></v-divider>
     <!-- User Icon -->
-    <v-btn v-if="userIsAuth" style="margin: 0px 15px;" color="purple" elevation="2">Login</v-btn>
-    <v-divider v-if="userIsAuth" vertical></v-divider>
-    <v-btn v-if="!userIsAuth"  @click="goToUserPage" icon class="mx-1">
-      <v-icon color="white">mdi-account-outline</v-icon>
-    </v-btn>
+    <div v-if="!$auth.loading">
+      <v-btn @click="logInAuthO" v-if="!$auth.isAuthenticated" style="margin: 0px 15px;" color="purple" elevation="2">Login</v-btn>
+      <v-divider v-if="!$auth.isAuthenticated" vertical></v-divider>
+      <v-btn v-if="$auth.isAuthenticated"  @click="goToUserPage" icon class="mx-1">
+        <v-icon color="white">mdi-account-outline</v-icon>
+      </v-btn>
+    </div>
     <v-divider vertical></v-divider>
     <v-btn @click="goToCartPage" icon class="mx-1">
       <v-badge color="purple lighten-2" content="2">
@@ -60,6 +63,14 @@ export default {
       fetch('https://fakestoreapi.com/products/categories')
             .then(res=>res.json())
             .then(json => console.log(json))
+    },
+    logInAuthO() {
+      this.$auth.loginWithRedirect();
+    }, 
+    logOutAuthO() {
+      this.$auth.logout({
+        returnTo: window.location.origin
+      });
     },
   },
 }
