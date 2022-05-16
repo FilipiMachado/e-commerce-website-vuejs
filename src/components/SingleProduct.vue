@@ -32,15 +32,19 @@
             <span class="singleproduct__product-options__left-title">Colors</span>
             <div class="singleproduct__product-options__left-colors-wrapper">
               <div v-for="option in productColors" :key="option.id">
-                <div @click="getColorOption(option.id)" :style="`backgroundColor:${option.color}`" class="singleproduct__product-options__left-colors"></div>
+                <div @click="getColorOption(option.id)" 
+                     :style="`backgroundColor:${option.color}; ${colorIsSelected ? 'border: 2px solid black' : 'border: none'}`" 
+                     class="singleproduct__product-options__left-colors"></div>
               </div>
             </div>
           </div>
           <div class="singleproduct__product-options__right-wrapper">
             <span class="singleproduct__product-options__right-title">Sizes</span>
             <div class="singleproduct__product-options__right-sizes-wrapper">
-              <div v-for="size in productSizes" :key="size.id" >
-                <div class="singleproduct__product-options__right-sizes">{{ size }}</div>
+              <div v-for="productSize in productSizes" :key="productSize.id" >
+                <div @click="getSizeOption(productSize.id)" 
+                     :style="sizeIsSelected ? 'border: 2px solid black' : 'border: 2px solid red'"
+                     class="singleproduct__product-options__right-sizes">{{ productSize.size }}</div>
               </div>
             </div>
           </div>
@@ -80,6 +84,8 @@ export default {
   data() {
     return {
       singleProductInfo: undefined,
+      colorIsSelected: false,
+      sizeIsSelected: false,
       productColors: {
         option1: {
           color: '#d81b60',
@@ -99,11 +105,27 @@ export default {
         },
       },
       productSizes: {
-        small: 'S',
-        med: 'M',
-        large: 'L',
-        xlarge: 'XL',
-        xxlarge: 'XXl'
+        small: {
+          size: 'S',
+
+          id: 1,
+        },
+        medium: {
+          size: 'M',
+          id: 2,
+        },
+        large: {
+          size: 'L',
+          id: 3,
+        },
+        xlarge: {
+          size: 'XL',
+          id: 4,
+        },
+        xxlarge: {
+          size: 'XXL',
+          id: 5,
+        },
       },
     }
   },
@@ -118,8 +140,18 @@ export default {
               this.singleProductInfo = json
               })
     },
-    getColorOption(color) {
-      console.log(color)
+    getColorOption(colorValue) {
+      /* :style coloca uma propriedade css no html */
+      if (colorValue) {
+        this.colorIsSelected = !this.colorIsSelected
+      }
+      //console.log(colorValue)
+    },
+    getSizeOption(sizeValue) {
+      if (sizeValue) {
+        this.sizeIsSelected = !this.sizeIsSelected
+      }
+      console.log(sizeValue)
     },
   }
 }
@@ -211,18 +243,6 @@ export default {
   margin-right: 5px;
   border-radius: 4px;
   cursor: pointer;
-}
-.color1 {
-  background-color: #d81b60;
-}
-.color2 {
-  background-color: #5e35b1;
-}
-.color3 {
-  background-color: #1e88e5;
-}
-.color4 {
-  background-color: #00acc1;
 }
 .singleproduct__product-options__right-wrapper {
   display: flex;

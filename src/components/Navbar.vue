@@ -18,7 +18,6 @@
     <v-spacer></v-spacer>
     <v-btn @click="logOutAuthO" v-if="$auth.isAuthenticated" style="margin: 0px 15px;" color="purple" elevation="2">Logout</v-btn>
     <v-divider vertical></v-divider>
-    <!-- User Icon -->
     <div v-if="!$auth.loading">
       <v-btn @click="logInAuthO" v-if="!$auth.isAuthenticated" style="margin: 0px 15px;" color="purple" elevation="2">Login</v-btn>
       <v-divider v-if="!$auth.isAuthenticated" vertical></v-divider>
@@ -45,19 +44,16 @@ export default {
     }
   },
   mounted() {
-    this.getCategories()
+    //this.getCategories()
   },
   methods: {
     goToHomePage() {
-      console.log('Home Page indo de boas!')
       this.$router.push('/')
     },
     goToUserPage() {
-      console.log('User Page indo de boas!')
       this.$router.push('/user')
     },
     goToCartPage() {
-      console.log('Cart Page indo de boas!')
       this.$router.push('/cartpage')
     },
     getCategories() {

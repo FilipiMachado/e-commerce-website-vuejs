@@ -71,12 +71,19 @@
         </v-col>
         <v-col style="margin: 0 auto;" cols="12" sm="6" class="mt-n2 px-0 pb-0">
           <v-toolbar style="background-color: #CE93D8;"  flat outlined class="text-center">
-            <v-pagination style="margin: 0 auto;" v-model="page" :length="4"></v-pagination>
+            <v-pagination style="margin: 0 auto;" 
+                          v-model="page" 
+                         :length="4"></v-pagination>
           </v-toolbar>
         </v-col>
       </v-row>
     </v-card>
-    <v-card color="#eff0f2" height="250px" tile flat dark class="d-flex align-center justify-center mt-n10 card2">
+    <v-card color="#eff0f2" 
+            height="250px" 
+            tile 
+            flat 
+            dark 
+            class="d-flex align-center justify-center mt-n10 card2">
       <v-row>
         <v-col cols="12" sm="12">
           <h4 class="text-center black--text mt-10">SUBSCRIBE TO OUR NEWSLETTER</h4>
