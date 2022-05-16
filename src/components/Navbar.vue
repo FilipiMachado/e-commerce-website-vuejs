@@ -1,7 +1,7 @@
 <template>
   <v-app-bar app color="purple darken-1" dark>
     <v-divider vertical class="mr-3"></v-divider>
-    <v-btn @click="getCategories" icon>
+    <v-btn class="mr-3" @click="getCategories" icon>
       <v-icon>mdi-menu</v-icon>
     </v-btn>
     <v-toolbar-title>

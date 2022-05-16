@@ -36,7 +36,7 @@
                 <v-card height="300" align="center" flat outlined tile>
                   <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn color="black" small dark>10%</v-btn>
+                    <v-btn color="black" small dark>10% OFF!</v-btn>
                   </v-card-actions>
                   <v-img :src="cloth.image"
                          width="200"
@@ -151,10 +151,9 @@ export default {
   },
   methods: {
     getProducts() {
-      fetch('https://fakestoreapi.com/products?limit=10')
+      fetch('https://fakestoreapi.com/products?limit=15')
             .then(res=>res.json())
             .then((json)=> {
-              console.log(json)
               this.clothes = json
             })
     },

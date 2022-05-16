@@ -12,12 +12,12 @@
           <img class="userpage__userinfo__left-content__img" src="@/assets/profile_example.jpg" alt="">
         </div>
         <div class="userpage__userinfo__left-content__user-container">
-          <span class="userpage__userinfo__left-content__username">Welcome, Didines Machado</span>
+          <span class="userpage__userinfo__left-content__username">Welcome, John Doe</span>
           <div class="userpage__userinfo__left-content__user-email__container">
             <span style="color: purple;" class="material-symbols-outlined">
               mail
             </span>
-            <span class="userpage__userinfo__left-content__user-email">didinesmachado@myemail.com</span>
+            <span class="userpage__userinfo__left-content__user-email">johndoe@myemail.com</span>
           </div>
         </div>
         <div class="userpage__userinfo__left-content__user-config__container">
@@ -90,11 +90,10 @@ export default {
   width: 45%;
 }
 .userpage__userinfo__left-content__img-container {
-  margin: 0px 20px;
 }
 .userpage__userinfo__left-content__img {
-  width: 80%;
-  border-radius: 100%;
+  width: 60%;
+  border-radius: 10%;
 }
 .userpage__userinfo__left-content__user-container {
   display: flex;
