@@ -11,18 +11,18 @@
       </div>
       <div class="singleproduct__right-content__wrapper">
         <div class="singleproduct__right-content__title-wrapper">
-          <span class="singleproduct__right-content__title">Nonstick dishwasher PFOA</span>
+          <span class="singleproduct__right-content__title">{{ singleProductInfo.title }}</span>
         </div>
         <div class="singleproduct__right-content__reviews-wrapper">
           <span class="singleproduct__right-content__stars">stars</span>
-          <span class="singleproduct__right-content__reviews">(102)Review(s)</span>
+          <span class="singleproduct__right-content__reviews">({{ singleProductInfo.rating.count }}) Review(s)</span>
         </div>
         <div class="singleproduct__right-content__price-wrapper">
-          <span class="singleproduct__right-content__price">$70.00</span>
-          <span class="singleproduct__right-content__discounted-price"><strike>$80.00</strike></span>
+          <span class="singleproduct__right-content__price">${{ parseFloat(singleProductInfo.price * 0.9).toFixed(2) }}</span>
+          <span class="singleproduct__right-content__discounted-price"><strike>${{ singleProductInfo.price }}</strike></span>
         </div>
         <div class="singleproduct__right-content__description-wrapper">
-          <span class="singleproduct__right-content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias id itaque architecto? Deserunt, est libero culpa atque ratione, maiores ipsum voluptate facere voluptates quae repellat perferendis beatae, cum cupiditate mollitia!</span>
+          <span class="singleproduct__right-content__description">{{ singleProductInfo.description }}</span>
         </div>
         <div class="singleproduct__product-options__wrapper">
           <span class="singleproduct__product-options__title">Available Options</span>
@@ -31,20 +31,17 @@
           <div class="singleproduct__product-options__left-wrapper">
             <span class="singleproduct__product-options__left-title">Colors</span>
             <div class="singleproduct__product-options__left-colors-wrapper">
-              <div class="singleproduct__product-options__left-colors color1"></div>
-              <div class="singleproduct__product-options__left-colors color2"></div>
-              <div class="singleproduct__product-options__left-colors color3"></div>
-              <div class="singleproduct__product-options__left-colors color4"></div>
+              <div v-for="option in productColors" :key="option.id">
+                <div @click="getColorOption(option.id)" :style="`backgroundColor:${option.color}`" class="singleproduct__product-options__left-colors"></div>
+              </div>
             </div>
           </div>
           <div class="singleproduct__product-options__right-wrapper">
             <span class="singleproduct__product-options__right-title">Sizes</span>
             <div class="singleproduct__product-options__right-sizes-wrapper">
-              <div class="singleproduct__product-options__right-sizes">S</div>
-              <div class="singleproduct__product-options__right-sizes">M</div>
-              <div class="singleproduct__product-options__right-sizes">L</div>
-              <div class="singleproduct__product-options__right-sizes">XL</div>
-              <div class="singleproduct__product-options__right-sizes">XXL</div>
+              <div v-for="size in productSizes" :key="size.id" >
+                <div class="singleproduct__product-options__right-sizes">{{ size }}</div>
+              </div>
             </div>
           </div>
         </div>
@@ -70,7 +67,7 @@
         </div>
         <div class="singleproduct__availability-wrapper">
           <span class="singleproduct__availability">Availability: </span>
-          <span class="singleproduct__availability-quantity">180 Products in stock</span>
+          <span class="singleproduct__availability-quantity">(x) Products in stock</span>
         </div>
       </div>
     </div>
@@ -81,7 +78,49 @@
 export default {
   name: 'SingleProduct',
   data() {
-    return {}
+    return {
+      singleProductInfo: undefined,
+      productColors: {
+        option1: {
+          color: '#d81b60',
+          id: 1,
+        },
+        option2: {
+          color: '#5e35b1',
+          id: 2,
+        },
+        option3: {
+          color: '#1e88e5',
+          id: 3,
+        },
+        option4: {
+          color: '#00acc1',
+          id: 4,
+        },
+      },
+      productSizes: {
+        small: 'S',
+        med: 'M',
+        large: 'L',
+        xlarge: 'XL',
+        xxlarge: 'XXl'
+      },
+    }
+  },
+  mounted() {
+    this.getProductInfo()
+  },
+  methods: {
+    async getProductInfo() {
+      fetch(`https://fakestoreapi.com/products/${this.$route.params.productid}`)
+            .then(res=>res.json())
+            .then((json)=>{
+              this.singleProductInfo = json
+              })
+    },
+    getColorOption(color) {
+      console.log(color)
+    },
   }
 }
 </script>
@@ -235,6 +274,7 @@ export default {
   cursor: pointer;
 }
 .singleproduct__quantity {
+  color: #3d3d3d;
   margin: 0px 20px;
 }
 .singleproduct__quantity-plus {

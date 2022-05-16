@@ -24,7 +24,7 @@ const routes = [
     component: CartPage
   },
   {
-    path: '/single-product',
+    path: '/single-product/:productid',
     name: 'SingleProduct',
     component: SingleProduct
   },

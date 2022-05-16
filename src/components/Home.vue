@@ -8,7 +8,7 @@
             dark>
       <v-row>
         <v-col cols="12" sm="12">
-          <h4 class="text-center">SEE THIS AMAZING NEWS!</h4>
+          <h4 class="text-center">ALL PRODUCTS WITH 10% DISCOUNT!</h4>
         </v-col>
         <v-col cols="12" sm="12">
           <v-breadcrumbs :items="items" class="justify-center mt-n7" dark>
@@ -36,8 +36,7 @@
                 <v-card height="300" align="center" flat outlined tile>
                   <v-card-actions>
                     <v-spacer></v-spacer>
-                    <!-- Discount Card -->
-                    <!-- <v-btn color="black" small dark>{{ cloth.sold }}</v-btn> -->
+                    <v-btn color="black" small dark>10%</v-btn>
                   </v-card-actions>
                   <v-img :src="cloth.image"
                          width="200"
@@ -154,7 +153,7 @@ export default {
     },
     goToSingleProductPage(payload) {
       console.log(payload)
-      this.$router.push('/single-product')
+      this.$router.push(`/single-product/${payload}`)
     },
   },
 };
