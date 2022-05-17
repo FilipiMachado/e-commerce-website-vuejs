@@ -1,13 +1,14 @@
 <template>
   <div class="singleproduct__main-content">
-    <div class="singleproduct__main-content__wrapper">
-      <div class="singleproduct__mini-images__container">
-        <div class="singleproduct__mini-images__img mini-img-selected"></div>
-        <div class="singleproduct__mini-images__img"></div>
-        <div class="singleproduct__mini-images__img"></div>
-        <div class="singleproduct__mini-images__img"></div>
+    <div class="singleproduct__main-content__wrapper"> 
+      <div class="singleproduct__mini-images__container"> 
+        <div :style="{ backgroundImage: `url(${singleProductInfo.image})` }" class="singleproduct__mini-images__img mini-img-selected"></div>
+        <div :style="{ backgroundImage: `url(${singleProductInfo.image})` }" class="singleproduct__mini-images__img"></div>
+        <div :style="{ backgroundImage: `url(${singleProductInfo.image})` }" class="singleproduct__mini-images__img"></div>
+        <div :style="{ backgroundImage: `url(${singleProductInfo.image})` }" class="singleproduct__mini-images__img"></div>
       </div>
-      <div class="singleproduct__left-content__wrapper">
+      <div :style="{ backgroundImage: `url(${singleProductInfo.image})` }" 
+           class="singleproduct__left-content__wrapper">
       </div>
       <div class="singleproduct__right-content__wrapper">
         <div class="singleproduct__right-content__title-wrapper">
@@ -24,10 +25,10 @@
         <div class="singleproduct__right-content__description-wrapper">
           <span class="singleproduct__right-content__description">{{ singleProductInfo.description }}</span>
         </div>
-        <div class="singleproduct__product-options__wrapper">
+        <div v-if="singleProductInfo.category ==  menClothCategory ? true : false" class="singleproduct__product-options__wrapper">
           <span class="singleproduct__product-options__title">Available Options</span>
         </div>
-        <div class="singleproduct__product-options__container">
+        <div v-if="singleProductInfo.category ==  menClothCategory ? true : false" class="singleproduct__product-options__container">
           <div class="singleproduct__product-options__left-wrapper">
             <span class="singleproduct__product-options__left-title">Colors</span>
             <div class="singleproduct__product-options__left-colors-wrapper">
@@ -65,11 +66,11 @@
             </span>
           </div>
         </div>
-        <div class="singleproduct__category-wrapper">
+        <div v-if="singleProductInfo.category ==  menClothCategory ? true : false" class="singleproduct__category-wrapper">
           <span class="singleproduct__category">Category: </span>
           <span class="singleproduct__category-title">Clothing</span>
         </div>
-        <div class="singleproduct__availability-wrapper">
+        <div v-if="singleProductInfo.category ==  menClothCategory ? true : false" class="singleproduct__availability-wrapper">
           <span class="singleproduct__availability">Availability: </span>
           <span class="singleproduct__availability-quantity">(x) Products in stock</span>
         </div>
@@ -84,6 +85,7 @@ export default {
   data() {
     return {
       singleProductInfo: undefined,
+      menClothCategory: "men's clothing",
       colorIsSelected: false,
       sizeIsSelected: false,
       productColors: {
@@ -166,10 +168,10 @@ export default {
   justify-content: center;
 }
 .singleproduct__left-content__wrapper {
-  width: 40%;
+  width: 30%;
+  max-width: 30%;
   height: 500px;
-  background-image: url('@/assets/single-product-example.jpg');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   margin: 0px 10px;
   border-radius: 4px;
@@ -347,7 +349,6 @@ export default {
 .singleproduct__mini-images__img {
   width: 80px;
   height: 80px;
-  background-image: url('@/assets/single-product-example.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   margin: 10px;
