@@ -1,6 +1,6 @@
 <template>
   <v-footer dark padless>
-    <v-card flat tile class="purple darken-1 white--text py-12 px-5" width="100%">
+    <v-card flat tile class="purple darken-1 white--text py-6 px-5" width="100%">
       <v-row>
         <v-col cols="12" sm="4">
           <v-card-text class="white--text pt-0">
@@ -45,15 +45,14 @@
               v-for="icon in icons"
               :key="icon"
               class="mx-1 white--text"
-              icon
-            >
+              icon>
               <v-icon size="24px">
                 {{ icon }}
               </v-icon>
             </v-btn>
           </v-card-text>
           <v-card-text class="grey--text mt-14"> Payment Methods: </v-card-text>
-          <v-toolbar flat color="transparent">
+          <v-toolbar style="float: left;" flat color="transparent">
             <v-spacer></v-spacer>
             <v-icon large>fab fa-cc-visa</v-icon>
             <v-icon class="mx-2" large>fab fa-cc-paypal</v-icon>
@@ -73,5 +72,6 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
 </style>

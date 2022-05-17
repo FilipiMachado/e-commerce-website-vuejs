@@ -1,5 +1,7 @@
 <template>
-  <div class="userpage__main-content">
+<div>
+  <NoAuth v-if="!$auth.isAuthenticated"/>
+  <div v-if="$auth.isAuthenticated" class="userpage__main-content">
     <div class="userpage__main-title__wrapper">
       <span class="material-symbols-outlined userpage__main-title__icon">
         person
@@ -37,15 +39,18 @@
       <UserData />
     </div>
   </div>
+</div>
 </template>
  
 <script>
 import UserData from '@/components/UserData.vue'
+import NoAuth from '@/components/NotAuth.vue'
 
 export default {
   name: 'UserPage',
   components: {
     UserData,
+    NoAuth,
   },
   data() {
     return {}

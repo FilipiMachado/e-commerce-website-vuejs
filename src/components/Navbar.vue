@@ -27,7 +27,7 @@
     </div>
     <v-divider v-if="$auth.isAuthenticated" vertical></v-divider>
     <v-btn v-if="$auth.isAuthenticated" @click="goToCartPage" icon class="mx-1">
-      <v-badge color="purple lighten-2" content="2">
+      <v-badge color="purple lighten-2" content="1">
         <v-icon>mdi-cart-outline</v-icon>
       </v-badge>
     </v-btn>

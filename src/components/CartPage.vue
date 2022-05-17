@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="cartpage__mycart__wrapper">
+    <NotAuth v-if="!$auth.isAuthenticated"/>
+    <div v-if="$auth.isAuthenticated">
+      <div class="cartpage__mycart__wrapper">
       <span class="material-symbols-outlined cartpage__mycart__icon">
         shopping_cart
       </span>
@@ -108,13 +110,19 @@
          </div>
        </div>
      </div>
-   </div>
+    </div>
+    </div>
  </div>
 </template>
 
 <script>
+import NotAuth from '@/components/NotAuth.vue'
+
 export default {
   name: 'CartPage',
+  components: {
+    NotAuth,
+  },
   data() {
     return {
       noProductInCart: true,
