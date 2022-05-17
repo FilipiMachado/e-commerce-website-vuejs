@@ -11,7 +11,7 @@
       </template>
       <v-list>
         <v-list-item v-for="(item, index) in items" :key="index">
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
+          <v-list-item-title class="productcategory__list-item">{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-menu>
@@ -28,13 +28,13 @@ export default {
           title: 'test'
         },
         item2: {
-          title: 'test'
+          title: 'test2'
         },
         item3: {
-          title: 'test'
+          title: 'test3'
         },
         item4: {
-          title: 'test'
+          title: 'test4'
         },
       }
     };
@@ -45,5 +45,8 @@ export default {
 <style>
 .productcategory__main-content {
   z-index: 100;
+}
+.productcategory__list-item {
+  cursor: pointer;
 }
 </style>
