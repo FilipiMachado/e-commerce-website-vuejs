@@ -6,7 +6,14 @@
       </span>
       <span class="cartpage__mycart__title">My Cart</span>
     </div>
-    <div class="cartpage__main-content">
+    <div v-if="noProductInCart" class="cartpage__mycart__no-product-wrapper">
+      <span class="cartpage__mycart__no-product-title">
+        There is no orders yet! Click  
+        <span @click="goToHomePage" class="cartpage__mycart__no-product-link">here</span> 
+        to choose a product.
+      </span>
+    </div>
+    <div v-if="!noProductInCart" class="cartpage__main-content">
       <div class="cartpage__cart-items-info__container">
        <div class="cartpage__cart-header__container">
         <div class="cartpage__cart-header__product-wrapper">
@@ -68,7 +75,7 @@
       </div>
     </div>
    </div>
-   <div class="cartpage__clear-cart__container">
+   <div v-if="!noProductInCart" class="cartpage__clear-cart__container">
      <div class="cartpage__clear-cart__wrapper">
        <span class="material-symbols-outlined cartpage__clear-cart__icon">
          delete_forever
@@ -76,7 +83,7 @@
        <span class="cartpage__clear-cart__title">Clear Cart</span>
      </div>
    </div>
-   <div class="cartpage__bottom-content__container">
+   <div v-if="!noProductInCart" class="cartpage__bottom-content__container">
      <div class="cartpage__discount-coupon__container">
        <span class="cartpage__discount-coupon__title">Discount Coupon</span>
        <div class="cartpage__discount-coupon__input-wrapper">
@@ -109,8 +116,15 @@
 export default {
   name: 'CartPage',
   data() {
-    return {}
-  }
+    return {
+      noProductInCart: true,
+    }
+  },
+  methods: {
+    goToHomePage() {
+      this.$router.push('/')
+    },
+  },
 }
 </script>
 
@@ -400,5 +414,24 @@ export default {
   color: #fff;
   padding: 5px 15px;
   border-radius: 5px;
+}
+.cartpage__mycart__no-product-wrapper {
+  max-width: 1280px;
+  background-color:#f2f3f4;
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+  padding: 80px;
+  margin-top: 10%;
+  border-radius: 10px;
+}
+.cartpage__mycart__no-product-title {
+  margin: auto;
+  font-size: 24px;
+  font-weight: 500;
+}
+.cartpage__mycart__no-product-link {
+  color: purple;
+  cursor: pointer;
 }
 </style>
