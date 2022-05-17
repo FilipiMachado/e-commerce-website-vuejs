@@ -2,7 +2,8 @@
   <v-app-bar app color="purple darken-1" dark>
     <v-divider vertical class="mr-3"></v-divider>
     <v-btn class="mr-3" @click="getCategories" icon>
-      <v-icon>mdi-menu</v-icon>
+      <!-- <v-icon>mdi-menu</v-icon> -->
+      <ProductCategory />
     </v-btn>
     <v-toolbar-title>
       Categories
@@ -35,8 +36,13 @@
 </template>
 
 <script>
+import ProductCategory from '@/components/ProductCategory.vue'
+
 export default {
   name: 'Navbar',
+  components: {
+    ProductCategory,
+  },
   data() {
     return {
       userIsAuth: false,
