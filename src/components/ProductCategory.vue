@@ -11,7 +11,7 @@
       </template>
       <v-list>
         <v-list-item v-for="categories in categoriesData" :key="categories.id">
-          <v-list-item-title class="productcategory__list-item">{{ categories.toUpperCase() }}</v-list-item-title>
+          <v-list-item-title @click="chooseCategory(categories)" class="productcategory__list-item">{{ categories.toUpperCase() }}</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-menu>
@@ -23,25 +23,12 @@ export default {
   name: 'ProductCategory',
   data() {
     return {
-      items: {
-        item1: {
-          title: 'test'
-        },
-        item2: {
-          title: 'test2'
-        },
-        item3: {
-          title: 'test3'
-        },
-        item4: {
-          title: 'test4'
-        },
-      },
       categoriesData: undefined,
     };
   },
   mounted() {
     this.getCategories()
+    console.log(this.$store.state.categoryName)
   },
   methods: {
     getCategories() {
@@ -51,6 +38,11 @@ export default {
               this.categoriesData = json
               console.log(json)
             })
+    },
+    chooseCategory(payload) {
+      console.log(this.$store.state.categoryName)
+      console.log(payload)
+      this.$store.state.categoryName = payload
     },
   }
 };
