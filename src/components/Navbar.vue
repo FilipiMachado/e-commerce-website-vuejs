@@ -2,7 +2,6 @@
   <v-app-bar app color="purple darken-1" dark>
     <v-divider vertical class="mr-3"></v-divider>
     <v-btn class="mr-3" @click="getCategories" icon>
-      <!-- <v-icon>mdi-menu</v-icon> -->
       <ProductCategory />
     </v-btn>
     <v-toolbar-title>
@@ -46,12 +45,9 @@ export default {
   data() {
     return {
       userIsAuth: false,
-      
     }
   },
-  mounted() {
-    //this.getCategories()
-  },
+  mounted() {},
   methods: {
     goToHomePage() {
       this.$router.push('/')
@@ -61,11 +57,6 @@ export default {
     },
     goToCartPage() {
       this.$router.push('/cartpage')
-    },
-    getCategories() {
-      fetch('https://fakestoreapi.com/products/categories')
-            .then(res=>res.json())
-            .then(json => console.log(json))
     },
     logInAuthO() {
       this.$auth.loginWithRedirect();

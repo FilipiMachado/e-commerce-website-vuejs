@@ -10,8 +10,8 @@
         </v-btn>
       </template>
       <v-list>
-        <v-list-item v-for="(item, index) in items" :key="index">
-          <v-list-item-title class="productcategory__list-item">{{ item.title }}</v-list-item-title>
+        <v-list-item v-for="categories in categoriesData" :key="categories.id">
+          <v-list-item-title class="productcategory__list-item">{{ categories.toUpperCase() }}</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-menu>
@@ -36,9 +36,23 @@ export default {
         item4: {
           title: 'test4'
         },
-      }
+      },
+      categoriesData: undefined,
     };
   },
+  mounted() {
+    this.getCategories()
+  },
+  methods: {
+    getCategories() {
+      fetch('https://fakestoreapi.com/products/categories')
+            .then(res=>res.json())
+            .then((json) => {
+              this.categoriesData = json
+              console.log(json)
+            })
+    },
+  }
 };
 </script>
 
