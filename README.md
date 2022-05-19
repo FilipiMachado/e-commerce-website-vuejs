@@ -31,6 +31,9 @@ Test: https://e-commerce-website-vuejs.netlify.app/
 This project was developed using this technologies:
 
 - [Vue.JS](https://vuejs.org/)
+- [Vue Router](https://router.vuejs.org/)
+- [Vuetify](https://vuetifyjs.com/en/)
+- [Auth0](https://auth0.com/)
 - [Netlify](https://www.netlify.com/)
 
 ## 🚀 How to Execute
