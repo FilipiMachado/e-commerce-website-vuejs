@@ -31,16 +31,9 @@
             </v-btn>
           </div>
         </v-col>
-        <v-col cols="12" sm="12">
-          <v-breadcrumbs :items="items" class="justify-center mt-n7" dark>
-            <template v-slot:divider>
-              <v-icon color="#fff">mdi-chevron-right</v-icon>
-            </template>
-          </v-breadcrumbs>
-        </v-col>
       </v-row>
     </v-card>
-    <v-card tile class="mx-16 mt-n6 card1" color="white">
+    <v-card tile class="mx-16 card1" color="white">
       <v-row>
         <SpotlightProducts />
       </v-row>
@@ -133,38 +126,18 @@
 
 <script>
 import SpotlightProducts from '@/components/SpotlightProducts.vue'
+import LazyLoading from '@/components/LazyLoading.vue'
 
 export default {
   name: "Home",
   components: {
     SpotlightProducts,
+    LazyLoading,
   },
   data() {
     return {
       page: 1,
       categoriesData: undefined,
-      items: [
-        {
-          text: "Home",
-          disabled: false,
-          href: "/",
-        },
-        /* {
-          text: "Catalog",
-          disabled: false,
-          href: "breadcrumbs_catalog",
-        },
-        {
-          text: "Men",
-          disabled: false,
-          href: "breadcrumbs_men",
-        },
-        {
-          text: "Shoes",
-          disabled: false,
-          href: "breadcrumbs_shoes",
-        }, */
-      ],
       clothes: [],
     };
   },
@@ -174,10 +147,9 @@ export default {
   },
   methods: {
     getProducts() {
-      fetch('https://fakestoreapi.com/products?limit=15')
+      fetch('https://fakestoreapi.com/products?limit=20')
             .then(res=>res.json())
             .then((json)=> {
-              this.$store.state.getProductsState = json
               this.clothes = json
             })
     },
@@ -197,7 +169,13 @@ export default {
     chooseCategory(payload) {
       //console.log(this.$store.state.categoryName)
       //console.log(payload)
-      console.log(payload)
+      console.log(payload) 
+      fetch(`https://fakestoreapi.com/products/category/${payload}`)
+            .then(res=>res.json())
+            .then((json)=> {
+              console.log(json)
+              this.clothes = json
+            })
     },
   },
 };
