@@ -1,6 +1,6 @@
 <h2>Popular Movies SPA</h2>
 
-Teste o Projeto: https://amazing-movies-vuejs.netlify.app/
+Teste o Projeto: https://e-commerce-website-vuejs.netlify.app/
 
 <p align="center">
   <a href="https://imgur.com/ENAsm3s"><img src="https://i.imgur.com/ENAsm3s.png" title="source: imgur.com" /></a>
@@ -62,7 +62,7 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 
 <h2>Popular Movies SPA</h2>
 
-Test: https://amazing-movies-vuejs.netlify.app/
+Test: https://e-commerce-website-vuejs.netlify.app/
 
 <p align="center">
   <a href="https://imgur.com/ENAsm3s"><img src="https://i.imgur.com/ENAsm3s.png" title="source: imgur.com" /></a>
