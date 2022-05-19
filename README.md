@@ -3,10 +3,10 @@
 Test: https://e-commerce-website-vuejs.netlify.app/
 
 <p align="center">
-  <a href="https://imgur.com/ENAsm3s"><img src="https://i.imgur.com/ENAsm3s.png" title="source: imgur.com" /></a>
+  <a href="https://imgur.com/H3pfcJB"><img src="https://i.imgur.com/H3pfcJB.png" title="source: imgur.com" /></a>
 </p>
 <p align="center">
-  <a href="https://imgur.com/m9TROMD"><img src="https://i.imgur.com/m9TROMD.png" title="source: imgur.com" /></a>
+  <a href="https://imgur.com/ZLMtRey"><img src="https://i.imgur.com/ZLMtRey.png" title="source: imgur.com" /></a>
 </p>
 <p align="center">
   <a href="https://imgur.com/4vOgsRW"><img src="https://i.imgur.com/4vOgsRW.png" title="source: imgur.com" /></a>
@@ -16,6 +16,12 @@ Test: https://e-commerce-website-vuejs.netlify.app/
 </p>
 <p align="center">
   <a href="https://imgur.com/MrCSzVC"><img src="https://i.imgur.com/MrCSzVC.png" title="source: imgur.com" /></a>
+</p>
+<p align="center">
+  <a href="https://imgur.com/71WkuqF"><img src="https://i.imgur.com/71WkuqF.png" title="source: imgur.com" /></a>
+</p>
+<p align="center">
+  <a href="https://imgur.com/71WkuqF"><img src="https://i.imgur.com/71WkuqF.png" title="source: imgur.com" /></a>
 </p>
 <p align="center">
   <a href="https://imgur.com/71WkuqF"><img src="https://i.imgur.com/71WkuqF.png" title="source: imgur.com" /></a>
