@@ -56,8 +56,8 @@ $ npm run serve
 The app will be available in this address http://localhost:8080.
 
 Remember: <br>
-<br>  You need a account at [Netlify](https://www.netlify.com/) to host this app;
-      You need a acccount at [Auth0](https://auth0.com/) to add your auth0 ID;
+You need a account at [Netlify](https://www.netlify.com/) to host this app; <br>
+You need a acccount at [Auth0](https://auth0.com/) to add your auth0 ID;
 
 ## 💻 Project
 
