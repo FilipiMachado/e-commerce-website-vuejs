@@ -20,6 +20,12 @@ Teste o Projeto: https://e-commerce-website-vuejs.netlify.app/
 <p align="center">
   <a href="https://imgur.com/71WkuqF"><img src="https://i.imgur.com/71WkuqF.png" title="source: imgur.com" /></a>
 </p>
+<p align="center">
+  <a href="https://imgur.com/71WkuqF"><img src="https://i.imgur.com/71WkuqF.png" title="source: imgur.com" /></a>
+</p>
+<p align="center">
+  <a href="https://imgur.com/71WkuqF"><img src="https://i.imgur.com/71WkuqF.png" title="source: imgur.com" /></a>
+</p>
 
 <br>
 
