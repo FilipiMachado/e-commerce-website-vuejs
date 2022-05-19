@@ -1,6 +1,7 @@
 <template>
   <div class="singleproduct__main-content">
-    <div class="singleproduct__main-content__wrapper"> 
+    <LazyLoading v-if="isLoading"/>
+    <div v-else class="singleproduct__main-content__wrapper"> 
       <div class="singleproduct__mini-images__container"> 
         <div :style="{ backgroundImage: `url(${singleProductInfo.image})` }" class="singleproduct__mini-images__img mini-img-selected"></div>
         <div :style="{ backgroundImage: `url(${singleProductInfo.image})` }" class="singleproduct__mini-images__img"></div>
@@ -34,7 +35,7 @@
             <div class="singleproduct__product-options__left-colors-wrapper">
               <div v-for="option in productColors" :key="option.id">
                 <div @click="getColorOption(option.id)" 
-                     :style="`backgroundColor:${option.color}; ${colorIsSelected ? 'border: 2px solid black' : 'border: none'}`" 
+                     :style="`backgroundColor:${option.color}; ${colorIsSelected ? 'border: 1px solid black' : 'border: none'}`" 
                      class="singleproduct__product-options__left-colors"></div>
               </div>
             </div>
@@ -44,7 +45,7 @@
             <div class="singleproduct__product-options__right-sizes-wrapper">
               <div v-for="productSize in productSizes" :key="productSize.id" >
                 <div @click="getSizeOption(productSize.id)" 
-                     :style="sizeIsSelected ? 'border: 2px solid black' : 'border: 2px solid red'"
+                     :style="sizeIsSelected ? 'border: 1px solid black' : 'border: 1px solid grey'"
                      class="singleproduct__product-options__right-sizes">{{ productSize.size }}</div>
               </div>
             </div>
@@ -80,10 +81,16 @@
 </template>
 
 <script>
+import LazyLoading from '@/components/LazyLoading.vue'
+
 export default {
   name: 'SingleProduct',
+  components: {
+    LazyLoading,
+  },
   data() {
     return {
+      isLoading: undefined,
       singleProductInfo: undefined,
       menClothCategory: "men's clothing",
       colorIsSelected: false,
@@ -136,10 +143,12 @@ export default {
   },
   methods: {
     async getProductInfo() {
+      this.isLoading = true
       fetch(`https://fakestoreapi.com/products/${this.$route.params.productid}`)
             .then(res=>res.json())
             .then((json)=>{
               this.singleProductInfo = json
+              this.isLoading = false
               })
     },
     getColorOption(colorValue) {
