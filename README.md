@@ -64,7 +64,7 @@ Remember: <br>
 The E-commerce was developed using front-end knowledge, routing, authentication and products requests via Fake Store Products API.                                                                                                            
 ## 📝 License
 
-This project is under MIT licence. Read this file [LICENSE](LICENSE.md) for more details.
+This project is under MIT license. Read this file [LICENSE](LICENSE.md) for more details.
 
 <hr/>
 
