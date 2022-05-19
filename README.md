@@ -9,22 +9,22 @@ Test: https://e-commerce-website-vuejs.netlify.app/
   <a href="https://imgur.com/ZLMtRey"><img src="https://i.imgur.com/ZLMtRey.png" title="source: imgur.com" /></a>
 </p>
 <p align="center">
-  <a href="https://imgur.com/4vOgsRW"><img src="https://i.imgur.com/4vOgsRW.png" title="source: imgur.com" /></a>
+  <a href="https://imgur.com/xYsL8zu"><img src="https://i.imgur.com/xYsL8zu.png" title="source: imgur.com" /></a>
 </p>
 <p align="center">
-  <a href="https://imgur.com/Xt1b3QK"><img src="https://i.imgur.com/Xt1b3QK.png" title="source: imgur.com" /></a>
+  <a href="https://imgur.com/34r6SjS"><img src="https://i.imgur.com/34r6SjS.png" title="source: imgur.com" /></a>
 </p>
 <p align="center">
-  <a href="https://imgur.com/MrCSzVC"><img src="https://i.imgur.com/MrCSzVC.png" title="source: imgur.com" /></a>
+  <a href=""><img src="" title="source: imgur.com" /></a>
 </p>
 <p align="center">
-  <a href="https://imgur.com/71WkuqF"><img src="https://i.imgur.com/71WkuqF.png" title="source: imgur.com" /></a>
+  <a href=""><img src="" title="source: imgur.com" /></a>
 </p>
 <p align="center">
-  <a href="https://imgur.com/71WkuqF"><img src="https://i.imgur.com/71WkuqF.png" title="source: imgur.com" /></a>
+  <a href=""><img src="" title="source: imgur.com" /></a>
 </p>
 <p align="center">
-  <a href="https://imgur.com/71WkuqF"><img src="https://i.imgur.com/71WkuqF.png" title="source: imgur.com" /></a>
+  <a href=""><img src="" title="source: imgur.com" /></a>
 </p>
 
 <br>
