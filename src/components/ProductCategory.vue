@@ -28,7 +28,7 @@ export default {
   },
   mounted() {
     this.getCategories()
-    console.log(this.$store.state.categoryName)
+    //console.log(this.$store.state.categoryName)
   },
   methods: {
     getCategories() {
@@ -36,12 +36,12 @@ export default {
             .then(res=>res.json())
             .then((json) => {
               this.categoriesData = json
-              console.log(json)
+              //console.log(json)
             })
     },
     chooseCategory(payload) {
-      console.log(this.$store.state.categoryName)
-      console.log(payload)
+      //console.log(this.$store.state.categoryName)
+      //console.log(payload)
       this.$store.state.categoryName = payload
     },
   }

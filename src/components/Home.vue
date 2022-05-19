@@ -148,12 +148,16 @@ export default {
   },
   mounted() {
     this.getProducts()
+    //console.log(this.$store.state.categoryName)
+    //this.getProductsFromCategory()
+    console.log(this.$store.state.getProductsState)
   },
   methods: {
     getProducts() {
       fetch('https://fakestoreapi.com/products?limit=15')
             .then(res=>res.json())
             .then((json)=> {
+              this.$store.state.getProductsState = json
               this.clothes = json
             })
     },
@@ -161,6 +165,13 @@ export default {
       console.log(payload)
       this.$router.push(`/single-product/${payload}`)
     },
+    /* getProductsFromCategory() { 
+      fetch(`https://fakestoreapi.com/products/category/${this.$store.state.categoryName}`)
+            .then(res=>res.json())
+            .then((json)=>{
+              console.log(json)
+            })
+    } */
   },
 };
 </script>
