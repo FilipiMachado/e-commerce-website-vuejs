@@ -1,4 +1,4 @@
-<h2>Popular Movies SPA</h2>
+<h2>E-commerce Website</h2>
 
 Test: https://e-commerce-website-vuejs.netlify.app/
 
@@ -56,12 +56,12 @@ $ npm run serve
 The app will be available in this address http://localhost:8080.
 
 Remember: <br>
-You need a account at [Netlify](https://www.netlify.com/) to host this app; <br>
-You need a acccount at [Auth0](https://auth0.com/) to add your auth0 ID;
+- You need a account at [Netlify](https://www.netlify.com/) to host this app; <br>
+- You need a acccount at [Auth0](https://auth0.com/) to add your auth0 ID;
 
 ## 💻 Project
 
-The Popular Movies SPA was developed using front-end knowledge and requests via API.                                                                                                            
+The E-commerce was developed using front-end knowledge and requests via Fake Store Products API.                                                                                                            
 ## 📝 License
 
 This project is under MIT licensa. Read this file [LICENSE](LICENSE.md) for more details.
