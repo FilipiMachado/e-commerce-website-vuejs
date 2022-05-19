@@ -8,14 +8,14 @@
       </span>
       <span class="cartpage__mycart__title">My Cart</span>
     </div>
-    <div v-if="noProductInCart" class="cartpage__mycart__no-product-wrapper">
+    <div v-if="!noProductInCart" class="cartpage__mycart__no-product-wrapper">
       <span class="cartpage__mycart__no-product-title">
         There is no orders yet! Click  
         <span @click="goToHomePage" class="cartpage__mycart__no-product-link">here</span> 
         to choose a product.
       </span>
     </div>
-    <div v-if="!noProductInCart" class="cartpage__main-content">
+    <div v-if="noProductInCart" class="cartpage__main-content">
       <div class="cartpage__cart-items-info__container">
        <div class="cartpage__cart-header__container">
         <div class="cartpage__cart-header__product-wrapper">
@@ -33,8 +33,8 @@
           <img class="cartpage__product-info__img" src="@/assets/item-sell_example.jpg" alt="">
         </div>
         <div class="cartpage__product-info__product-title-wrapper">
-          <span class="cartpage__product-info__product-title-name">Gabinete Gamer Cooler Master CMP 510, RGB, Mid-Tower, Lateral de Vidro, Com 3 Fans, Preto, CP510-KGNN-S00</span>
-          <span class="cartpage__product-info__product-title-desc">SKU: CP510-KGNN-S00</span>
+          <span class="cartpage__product-info__product-title-name">Gaming Desktop</span>
+          <span class="cartpage__product-info__product-title-desc">SMU: CP510-ZX22-S10</span>
         </div>
         <div class="cartpage__product-info__add-remove-items__wrapper">
           <span class="material-symbols-outlined cartpage__product-info__remove-item">
@@ -61,16 +61,16 @@
       </div>
       <div class="cartpage__resume-info__subtotal-wrapper">
         <span class="cartpage__resume-info__subtotal-title">Subtotal</span>
-        <span class="cartpage__resume-info__subtotal-value">$ 5.227.05</span>
+        <span class="cartpage__resume-info__subtotal-value">$ 795.34</span>
       </div>
       <div class="cartpage__resume-info__total-wrapper">
         <span class="cartpage__resume-info__total-title">Total</span>
-        <span class="cartpage__resume-info__total-value">$ 5.227.05</span>
+        <span class="cartpage__resume-info__total-value">$ 795.34</span>
       </div>
       <div class="cartpage__resume-info__incash-wrapper">
         <span class="cartpage__resume-info__incash-title">in cash</span>
-        <span class="cartpage__resume-info__incash-value">$4.599.80</span>
-        <span class="cartpage__resume-info__incash-desc">12% discount in credit card</span>
+        <span class="cartpage__resume-info__incash-value">$ 715.50</span>
+        <span class="cartpage__resume-info__incash-desc">10% discount in cash</span>
       </div>
       <div class="cartpage__resume-info__finish-order-wrapper">
         <button class="cartpage__resume-info__finish-order-btn">Order Now</button>

@@ -46,7 +46,7 @@
                    v-for="(cloth, i) in clothes"
                    :key="i"
                    :class="cloth.class">
-              <v-hover v-slot:default="{ hover }">
+              <v-hover v-if="cloth" v-slot:default="{ hover }">
                 <v-card height="300" align="center" flat outlined tile>
                   <v-card-actions>
                     <v-spacer></v-spacer>
@@ -82,6 +82,7 @@
               </v-hover>
             </v-col>
           </v-row>
+          <LazyLoading class="mt-6" v-if="isLoading"/>
         </v-col>
         <v-col style="margin: 0 auto;" cols="12" sm="6" class="mt-n2 px-0 pb-0">
           <v-toolbar style="background-color: #CE93D8;"  flat outlined class="text-center">
@@ -139,6 +140,7 @@ export default {
       page: 1,
       categoriesData: undefined,
       clothes: [],
+      isLoading: undefined,
     };
   },
   mounted() {
@@ -147,10 +149,12 @@ export default {
   },
   methods: {
     getProducts() {
-      fetch('https://fakestoreapi.com/products?limit=20')
+      this.isLoading = true
+      fetch('https://fakestoreapi.com/products?limit=8')
             .then(res=>res.json())
             .then((json)=> {
               this.clothes = json
+              this.isLoading = false
             })
     },
     goToSingleProductPage(payload) {
@@ -167,13 +171,11 @@ export default {
             })
     },
     chooseCategory(payload) {
-      //console.log(this.$store.state.categoryName)
-      //console.log(payload)
-      console.log(payload) 
+      this.isLoading = true
       fetch(`https://fakestoreapi.com/products/category/${payload}`)
             .then(res=>res.json())
             .then((json)=> {
-              console.log(json)
+              this.isLoading = false
               this.clothes = json
             })
     },
