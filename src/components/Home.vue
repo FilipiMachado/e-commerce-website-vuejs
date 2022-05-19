@@ -9,6 +9,27 @@
       <v-row>
         <v-col cols="12" sm="12">
           <h4 class="text-center">ALL PRODUCTS WITH 10% DISCOUNT!</h4>
+          <div style="text-align: center;">
+            <v-btn class="mr-3" @click="getCategories" icon>
+              <div class="text-center productcategory__main-content">
+                <v-menu offset-y>
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn color="purple" 
+                           v-bind="attrs" 
+                           v-on="on"> 
+                      <span>Categories</span>
+                    </v-btn>
+                  </template>
+                  <v-list>
+                    <v-list-item v-for="categories in categoriesData" :key="categories.id">
+                      <v-list-item-title @click="chooseCategory(categories)" 
+                                         class="productcategory__list-item">{{ categories.toUpperCase() }}</v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </div>
+            </v-btn>
+          </div>
         </v-col>
         <v-col cols="12" sm="12">
           <v-breadcrumbs :items="items" class="justify-center mt-n7" dark>
@@ -121,6 +142,7 @@ export default {
   data() {
     return {
       page: 1,
+      categoriesData: undefined,
       items: [
         {
           text: "Home",
@@ -148,9 +170,7 @@ export default {
   },
   mounted() {
     this.getProducts()
-    //console.log(this.$store.state.categoryName)
-    //this.getProductsFromCategory()
-    console.log(this.$store.state.getProductsState)
+    this.getCategories()
   },
   methods: {
     getProducts() {
@@ -165,13 +185,20 @@ export default {
       console.log(payload)
       this.$router.push(`/single-product/${payload}`)
     },
-    /* getProductsFromCategory() { 
-      fetch(`https://fakestoreapi.com/products/category/${this.$store.state.categoryName}`)
+    getCategories() {
+      fetch('https://fakestoreapi.com/products/categories')
             .then(res=>res.json())
-            .then((json)=>{
-              console.log(json)
+            .then((json) => {
+              this.categoriesData = json
+              console.log(this.categoriesData)
+              //console.log(json)
             })
-    } */
+    },
+    chooseCategory(payload) {
+      //console.log(this.$store.state.categoryName)
+      //console.log(payload)
+      console.log(payload)
+    },
   },
 };
 </script>
@@ -205,5 +232,11 @@ export default {
 }
 .v-breadcrumbs >>> a {
   color: #fff;
+}
+.productcategory__main-content {
+  z-index: 100;
+}
+.productcategory__list-item {
+  cursor: pointer;
 }
 </style>

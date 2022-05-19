@@ -1,14 +1,6 @@
 <template>
   <v-app-bar app color="purple darken-1" dark>
-    <v-divider vertical class="mr-3"></v-divider>
-    <v-btn class="mr-3" @click="getCategories" icon>
-      <ProductCategory />
-    </v-btn>
-    <v-toolbar-title>
-      Categories
-    </v-toolbar-title>
-    <v-divider vertical class="ml-5"></v-divider>
-    <v-btn icon>
+    <v-btn class="ml-1" icon>
       <v-icon>mdi-magnify</v-icon>
     </v-btn>
     <v-divider vertical class="ml-1"></v-divider>
@@ -35,12 +27,10 @@
 </template>
 
 <script>
-import ProductCategory from '@/components/ProductCategory.vue'
 
 export default {
   name: 'Navbar',
   components: {
-    ProductCategory,
   },
   data() {
     return {
