@@ -6,9 +6,6 @@ Test: https://e-commerce-website-vuejs.netlify.app/
   <a href="https://imgur.com/H3pfcJB"><img src="https://i.imgur.com/H3pfcJB.png" title="source: imgur.com" /></a>
 </p>
 <p align="center">
-  <a href="https://imgur.com/ZLMtRey"><img src="https://i.imgur.com/ZLMtRey.png" title="source: imgur.com" /></a>
-</p>
-<p align="center">
   <a href="https://imgur.com/xYsL8zu"><img src="https://i.imgur.com/xYsL8zu.png" title="source: imgur.com" /></a>
 </p>
 <p align="center">
